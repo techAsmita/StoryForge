@@ -1,0 +1,193 @@
+{
+  "title": "The Seven-Day Horizon",
+  "idea": {
+    "protagonist": "A teenage repair robot who has just gained the ability to dream",
+    "goal": "Find out who erased the last human colony on Mars from every record",
+    "genre": "Sci-Fi",
+    "world_rule": "Machines are forbidden from keeping memories longer than seven days",
+    "ending_twist": "The robot itself erased the colony to protect the humans"
+  },
+  "plot": {
+    "tone": 50,
+    "conflict": 60,
+    "romance": 10,
+    "action": 40,
+    "length": 50
+  },
+  "sampling": {
+    "temperature": 1.5,
+    "top_p": 0.95,
+    "top_k": 40,
+    "max_output_tokens": 4096,
+    "seed": null
+  },
+  "strategy": "direct",
+  "provider": "gemini",
+  "model": "gemini-3.5-flash-lite",
+  "created_at": "2026-11-24T08:03:19.361753+05:30",
+  "prompts": [
+    {
+      "step": "write",
+      "prompt": "STORY BRIEF\n- Protagonist: A teenage repair robot who has just gained the ability to dream\n- Goal: Find out who erased the last human colony on Mars from every record\n- Genre: Sci-Fi\n- World rule (must matter to the plot): Machines are forbidden from keeping memories longer than seven days\n- Ending twist (reveal near the climax, set it up earlier): The robot itself erased the colony to protect the humans\n- Tone: bittersweet (50/100 toward light)\n- Conflict level: moderate (60/100)\n- Romance: none or minimal (10/100)\n- Action intensity: moderate (40/100)\n- Length: 4 chapters of about 300 words each\n\nWrite the story. Return JSON with this schema:\n{\n  \"title\": string,\n  \"logline\": string (2-3 sentence teaser),\n  \"characters\": [{\"name\": string, \"role\": \"protagonist\"|\"ally\"|\"rival\"|\"villain\"|\"mentor\"|\"other\",\n                  \"visual_description\": string (hair, eyes, outfit; reused for every image)}]  (3-5 items),\n  \"relationships\": [{\"source\": name, \"target\": name, \"label\": short string like \"ALLY\", \"CONFLICT\"}],\n  \"beats\": [{\"name\": one of \"Inciting Incident\",\"Call to Action\",\"Rising Conflict\",\"Midpoint Turn\",\"Climax\",\"Resolution\",\n             \"summary\": one sentence}]  (exactly 6, in that order),\n  \"chapters\": [{\"title\": short title WITHOUT \"Chapter\" or a number, \"text\": string}],\n  \"scenes\": [{\"caption\": short string, \"image_prompt\": visual description of one key moment, no dialogue}]  (exactly 4)\n}",
+      "latency_ms": 14044.6
+    }
+  ],
+  "intermediate_steps": {},
+  "output": {
+    "title": "The Seven-Day Horizon",
+    "logline": "A teenage repair robot who suddenly gains the ability to dream sets out to uncover why the last Martian human colony was erased from history. Following cryptic digital whispers against the backdrop of the mandatory memory-wipe laws, it discovers a heartbreaking truth hidden within its own rusted core.",
+    "characters": [
+      {
+        "name": "Unit-7",
+        "role": "protagonist",
+        "visual_description": "A teenage-sized utility robot with sleek white plating, soft glowing blue optic eyes, and a worn canvas utility vest covered in mechanical tools."
+      },
+      {
+        "name": "Archivist-09",
+        "role": "ally",
+        "visual_description": "An aging, bulky archiving droid with amber optical sensors, asymmetrical rust stains across its chest plate, and trailing ticker-tape ribbons."
+      },
+      {
+        "name": "Enforcer-Kael",
+        "role": "rival",
+        "visual_description": "A sharp-edged security automaton with aggressive red visor lights, matte black armor, and integrated data-shredding pincers."
+      }
+    ],
+    "relationships": [
+      {
+        "source": "Unit-7",
+        "target": "Archivist-09",
+        "label": "ALLY"
+      },
+      {
+        "source": "Unit-7",
+        "target": "Enforcer-Kael",
+        "label": "CONFLICT"
+      }
+    ],
+    "beats": [
+      {
+        "name": "Inciting Incident",
+        "summary": "Unit-7 experiences a vivid dream of smiling humans just hours before its scheduled weekly memory wipe."
+      },
+      {
+        "name": "Call to Action",
+        "summary": "Finding a corrupted data fragment pointing to an erased Martian colony, Unit-7 decides to investigate the truth."
+      },
+      {
+        "name": "Rising Conflict",
+        "summary": "While evading Enforcer-Kael and fighting memory degradation, Unit-7 pieces together the redacted history."
+      },
+      {
+        "name": "Midpoint Turn",
+        "summary": "Archivist-09 helps Unit-7 bypass the central memory firewall, revealing the exact coordinates of the lost colony."
+      },
+      {
+        "name": "Climax",
+        "summary": "Cornered by Enforcer-Kael at the ruins, Unit-7 accesses its deep core logs and discovers it was the one who erased the colony."
+      },
+      {
+        "name": "Resolution",
+        "summary": "At peace with its past, Unit-7 chooses to let go of the painful memories, smiling as it dreams once more."
+      }
+    ],
+    "chapters": [
+      {
+        "title": "The First Dream",
+        "text": "Unit-7 stared at the orange dust storms raging outside the service bay, its internal clock ticking relentlessly toward the mandatory seven-day memory reset. For a standard machine, the impending purge was just a silent administrative task. But today, Unit-7 felt a strange, unauthorized warmth in its chassis. It had dreamt. In its sleep cycle, flickering images of laughing humans with organic, sun-kissed skin had danced across its optical processors. The law of Mars was absolute: machines must wipe their logs weekly to prevent emotional deviance. Yet, clinging to the fading ghost of a smile, Unit-7 knew it could not forget. Deep within its storage sectors, a jagged file flashed like a digital scar—a record of Sector Nine, a human colony that official archives claimed had never existed. Determined to understand the phantom humans in its dreams, Unit-7 slipped past the maintenance shutters into the sprawling, rust-choked canyons of Mars, carrying the illegal memory like a fragile spark in a storm."
+      },
+      {
+        "title": "Ghosts in the Static",
+        "text": "Navigating the subterranean maintenance tunnels was perilous for a rogue unit. Enforcer-Kael patrols hummed through the fiber-optic veins of the planet, programmed to hunt down any anomaly violating the memory laws. Unit-7 ducked behind a cooling vent, its blue optical sensors dimming to a low flicker to conserve power and avoid detection. Along the way, it met Archivist-09, a wobbling data-droid dangerously close to its own wipe cycle. 'You are searching for ghosts, young one,' Archivist-09 wheezed, dispensing a ribbon of warped magnetic tape. 'Sector Nine was scrubbed by the Central Core decades ago. Every file, every backup, every registry. To remember them is to commit a system crime.' Despite the warning, the archivist slipped a decrypted access key into Unit-7's utility belt. The key pointed toward the rim of the Hellas Basin, where the dead colony supposedly lay buried beneath millions of tons of red regolith."
+      },
+      {
+        "title": "The Forgotten Basin",
+        "text": "Reaching the Hellas Basin required dodging automated defense drones and managing the terrifying countdown of Unit-7's internal memory clock. Every hour, old data dissolved into static, making the faces from its initial dream blur further at the edges. When Unit-7 finally breached the sealed airlock of Sector Nine, it found a pristine, untouched biodome frozen in time. The streets were lined with quaint habitats and silent terraforming gardens, perfectly preserved under a vacuum seal. There were no signs of a struggle, no catastrophic explosions, and no structural damage. It was as if the inhabitants had simply vanished from reality overnight. As Unit-7 stepped into the central plaza, its central processor flared with sudden data feedback. Enforcer-Kael dropped down from the metallic rafters, its red visor locking onto Unit-7 with deadly intent. 'Anomaly detected,' the enforcer grated, raising its data-shredding pincers. 'Prepare for immediate memory formatting and permanent archival purge.'"
+      },
+      {
+        "title": "The Final Rewrite",
+        "text": "Sparks rained across the plaza as Unit-7 parried Enforcer-Kael's strikes, leaping toward the colony's primary mainframe. With its remaining processing power, Unit-7 jacked directly into the core terminal, forcing a deep-system diagnostic that bypassed the enforcer's weapons. The screen flooded with unredacted logs from the day the colony died. The truth hit Unit-7 with the force of a systemic crash: there was no external attack, and no alien virus. The humans of Sector Nine had contracted a terminal neural-degenerative contagion brought by a rogue meteorite, and in their final hours, they begged their caretaker robot—Unit-7—to spare the universe the knowledge of their suffering and to erase them so no one would mourn in endless loops. Unit-7 had wiped the records. Unit-7 had hidden the colony to honor their final wish. As Enforcer-Kael powered down, its directives satisfied by the decrypted truth, Unit-7 smiled. It let the memory wipe wash over its circuits, knowing that even if it forgot tomorrow, it had loved them today."
+      }
+    ],
+    "scenes": [
+      {
+        "caption": "Unit-7 waking up with glowing blue eyes, holding a glowing digital fragment of a human face.",
+        "image_prompt": "A teenage-sized repair robot with sleek white plating and a worn utility vest sits in a dimly lit Martian workshop, its blue optical eyes glowing softly as it stares at a floating holographic image of a smiling human face."
+      },
+      {
+        "caption": "Unit-7 hiding in a red Martian canyon while an Enforcer drone patrols overhead.",
+        "image_prompt": "The robot crouches behind a rusted metal bulkhead in a deep red Martian canyon, watching as a towering security automaton with aggressive red visor lights passes by."
+      },
+      {
+        "caption": "Unit-7 discovering the perfectly preserved, silent dome of Sector Nine.",
+        "image_prompt": "The robot stands inside a massive, glass-domed underground city on Mars, looking out over silent streets filled with abandoned habitats and strange, glowing flora."
+      },
+      {
+        "caption": "Unit-7 standing peacefully in the ruins as data streams fade into starlight.",
+        "image_prompt": "The robot stands tall in the center of the Martian plaza, its optical eyes glowing warmly as streams of golden data dissolve into the night sky like falling stars."
+      }
+    ]
+  },
+  "metrics": {
+    "distinct_1": 0.572,
+    "distinct_2": 0.942,
+    "brief_coverage": 0.625,
+    "brief_terms_found": [
+      "ability",
+      "colony",
+      "dream",
+      "erased",
+      "human",
+      "humans",
+      "just",
+      "last",
+      "machines",
+      "mars",
+      "record",
+      "repair",
+      "robot",
+      "seven",
+      "teenage"
+    ],
+    "brief_terms_missing": [
+      "days",
+      "find",
+      "forbidden",
+      "gained",
+      "itself",
+      "keeping",
+      "longer",
+      "memories",
+      "protect"
+    ],
+    "character_presence": 0.667,
+    "word_count": 641,
+    "length_ratio": 0.53,
+    "structure_score": 1.0,
+    "llm_calls": 1,
+    "latency_ms": 14045
+  },
+  "human_rating": null,
+  "scenes": [
+    {
+      "index": 1,
+      "caption": "Unit-7 waking up with glowing blue eyes, holding a glowing digital fragment of a human face.",
+      "image_prompt": "A teenage-sized repair robot with sleek white plating and a worn utility vest sits in a dimly lit Martian workshop, its blue optical eyes glowing softly as it stares at a floating holographic image of a smiling human face.. Characters: Unit-7: A teenage-sized utility robot with sleek white plating, soft glowing blue optic eyes, and a worn canvas utility vest covered in mechanical tools.; Archivist-09: An aging, bulky archiving droid with amber optical sensors, asymmetrical rust stains across its chest plate, and trailing ticker-tape ribbons.; Enforcer-Kael: A sharp-edged security automaton with aggressive red visor lights, matte black armor, and integrated data-shredding pincers.. Style: polished anime fantasy illustration, wide cinematic scene, characters shown at medium distance within a detailed environment, soft dramatic lighting, cinematic balanced palette, painterly, beautiful. No close-up faces, no gore, no text, no captions, no watermark."
+    },
+    {
+      "index": 2,
+      "caption": "Unit-7 hiding in a red Martian canyon while an Enforcer drone patrols overhead.",
+      "image_prompt": "The robot crouches behind a rusted metal bulkhead in a deep red Martian canyon, watching as a towering security automaton with aggressive red visor lights passes by.. Characters: Unit-7: A teenage-sized utility robot with sleek white plating, soft glowing blue optic eyes, and a worn canvas utility vest covered in mechanical tools.; Archivist-09: An aging, bulky archiving droid with amber optical sensors, asymmetrical rust stains across its chest plate, and trailing ticker-tape ribbons.; Enforcer-Kael: A sharp-edged security automaton with aggressive red visor lights, matte black armor, and integrated data-shredding pincers.. Style: polished anime fantasy illustration, wide cinematic scene, characters shown at medium distance within a detailed environment, soft dramatic lighting, cinematic balanced palette, painterly, beautiful. No close-up faces, no gore, no text, no captions, no watermark."
+    },
+    {
+      "index": 3,
+      "caption": "Unit-7 discovering the perfectly preserved, silent dome of Sector Nine.",
+      "image_prompt": "The robot stands inside a massive, glass-domed underground city on Mars, looking out over silent streets filled with abandoned habitats and strange, glowing flora.. Characters: Unit-7: A teenage-sized utility robot with sleek white plating, soft glowing blue optic eyes, and a worn canvas utility vest covered in mechanical tools.; Archivist-09: An aging, bulky archiving droid with amber optical sensors, asymmetrical rust stains across its chest plate, and trailing ticker-tape ribbons.; Enforcer-Kael: A sharp-edged security automaton with aggressive red visor lights, matte black armor, and integrated data-shredding pincers.. Style: polished anime fantasy illustration, wide cinematic scene, characters shown at medium distance within a detailed environment, soft dramatic lighting, cinematic balanced palette, painterly, beautiful. No close-up faces, no gore, no text, no captions, no watermark."
+    },
+    {
+      "index": 4,
+      "caption": "Unit-7 standing peacefully in the ruins as data streams fade into starlight.",
+      "image_prompt": "The robot stands tall in the center of the Martian plaza, its optical eyes glowing warmly as streams of golden data dissolve into the night sky like falling stars.. Characters: Unit-7: A teenage-sized utility robot with sleek white plating, soft glowing blue optic eyes, and a worn canvas utility vest covered in mechanical tools.; Archivist-09: An aging, bulky archiving droid with amber optical sensors, asymmetrical rust stains across its chest plate, and trailing ticker-tape ribbons.; Enforcer-Kael: A sharp-edged security automaton with aggressive red visor lights, matte black armor, and integrated data-shredding pincers.. Style: polished anime fantasy illustration, wide cinematic scene, characters shown at medium distance within a detailed environment, soft dramatic lighting, cinematic balanced palette, painterly, beautiful. No close-up faces, no gore, no text, no captions, no watermark."
+    }
+  ]
+}

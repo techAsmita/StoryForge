@@ -1,0 +1,188 @@
+{
+  "title": "Shattered Memory",
+  "idea": {
+    "protagonist": "A lone exorcist with forgotten powers",
+    "goal": "Uncover the truth behind a shattered world",
+    "genre": "Dark Fantasy",
+    "world_rule": "Magic exists, but every spell costs the caster a memory",
+    "ending_twist": "The real villain is the protagonist's future self"
+  },
+  "plot": {
+    "tone": 30,
+    "conflict": 80,
+    "romance": 30,
+    "action": 85,
+    "length": 60
+  },
+  "sampling": {
+    "temperature": 0.9,
+    "top_p": 0.95,
+    "top_k": 40,
+    "max_output_tokens": 4096,
+    "seed": null
+  },
+  "strategy": "direct",
+  "provider": "gemini",
+  "model": "gemini-3.5-flash-lite",
+  "created_at": "2026-11-24T08:00:24.574650+05:30",
+  "prompts": [
+    {
+      "step": "write",
+      "prompt": "STORY BRIEF\n- Protagonist: A lone exorcist with forgotten powers\n- Goal: Uncover the truth behind a shattered world\n- Genre: Dark Fantasy\n- World rule (must matter to the plot): Magic exists, but every spell costs the caster a memory\n- Ending twist (reveal near the climax, set it up earlier): The real villain is the protagonist's future self\n- Tone: dark and grim (30/100 toward light)\n- Conflict level: high (80/100)\n- Romance: none or minimal (30/100)\n- Action intensity: intense battles (85/100)\n- Length: 4 chapters of about 330 words each\n\nWrite the story. Return JSON with this schema:\n{\n  \"title\": string,\n  \"logline\": string (2-3 sentence teaser),\n  \"characters\": [{\"name\": string, \"role\": \"protagonist\"|\"ally\"|\"rival\"|\"villain\"|\"mentor\"|\"other\",\n                  \"visual_description\": string (hair, eyes, outfit; reused for every image)}]  (3-5 items),\n  \"relationships\": [{\"source\": name, \"target\": name, \"label\": short string like \"ALLY\", \"CONFLICT\"}],\n  \"beats\": [{\"name\": one of \"Inciting Incident\",\"Call to Action\",\"Rising Conflict\",\"Midpoint Turn\",\"Climax\",\"Resolution\",\n             \"summary\": one sentence}]  (exactly 6, in that order),\n  \"chapters\": [{\"title\": short title WITHOUT \"Chapter\" or a number, \"text\": string}],\n  \"scenes\": [{\"caption\": short string, \"image_prompt\": visual description of one key moment, no dialogue}]  (exactly 4)\n}",
+      "latency_ms": 9325.4
+    }
+  ],
+  "intermediate_steps": {},
+  "output": {
+    "title": "Shattered Memory",
+    "logline": "A lone exorcist uses forbidden magic to navigate a broken realm, trading his past for power. He discovers too late that his ultimate enemy is the man he will eventually become.",
+    "characters": [
+      {
+        "name": "Kael",
+        "role": "protagonist",
+        "visual_description": "short raven-black hair, hollow grey eyes, worn leather exorcist coat over tattered steel armor"
+      },
+      {
+        "name": "Lyra",
+        "role": "ally",
+        "visual_description": "long braided silver hair, piercing green eyes, intricate runic robes stained with ash"
+      },
+      {
+        "name": "The Architect",
+        "role": "villain",
+        "visual_description": "completely obscured by a heavy iron mask, glowing violet eyes, sweeping dark velvet cape"
+      }
+    ],
+    "relationships": [
+      {
+        "source": "Kael",
+        "target": "Lyra",
+        "label": "ALLY"
+      },
+      {
+        "source": "Kael",
+        "target": "The Architect",
+        "label": "CONFLICT"
+      }
+    ],
+    "beats": [
+      {
+        "name": "Inciting Incident",
+        "summary": "Kael casts a spell to banish a shadow beast, erasing his childhood home from his mind."
+      },
+      {
+        "name": "Call to Action",
+        "summary": "Lyra convinces Kael to hunt the Architect, the entity responsible for shattering the world."
+      },
+      {
+        "name": "Rising Conflict",
+        "summary": "Kael fights corrupted spirits, losing more crucial memories with every victory."
+      },
+      {
+        "name": "Midpoint Turn",
+        "summary": "The duo breaches the citadel of the Architect, facing lethal magical traps."
+      },
+      {
+        "name": "Climax",
+        "summary": "Kael defeats the Architect, only to unmask him and find his own older face staring back."
+      },
+      {
+        "name": "Resolution",
+        "summary": "Left with a blank mind, Kael accepts his tragic loop and steps into the void."
+      }
+    ],
+    "chapters": [
+      {
+        "title": "The Price of Blood",
+        "text": "The obsidian fog rolled over the jagged peaks of what used to be the capital. Kael knelt in the ash, his breath shallow in the biting cold. A horde of abyssal wraiths shrieked, their formless bodies twisting through the ruined stone pillars. Kael raised his trembling hand, charging a blinding glyph of expulsion. Magic demanded a toll, an absolute tax paid in the currency of the mind. He whispered the incantation, thrusting his palm forward. A wave of searing white fire obliterated the wraiths instantly. As the smoke cleared, Kael gasped, clutching his head. The faces of his parents, the warmth of his first home, the very reason he picked up the blade—all of it vanished, replaced by a cold, echoing emptiness. He stared at his hand, barely remembering who he was. Lyra stepped out from the shadows of a broken archway, her silver braid catching the dim light of the dying stars. 'You lost another piece, didn't you?' she asked, her voice heavy with sorrow. Kael stood up, his grey eyes dead and distant. 'It doesn't matter,' he muttered, though he could no longer recall why he was fighting."
+      },
+      {
+        "title": "Whispers in the Void",
+        "text": "They traveled across the floating debris fields of the shattered world, guided by the pulsing ley lines that bled into the abyss. Lyra kept a close watch on Kael, noting the way he paused, struggling to recognize his own weapons. 'The Architect is at the center of the fracture,' Lyra warned, adjusting her runic robes. 'Every barrier we break will demand more of your soul.' Kael tightened his grip on his sword, feeling the phantom weight of a history he could no longer access. Shadows lunged from the dimensional tears along the path. Without hesitation, Kael drew a complex ward in the air, trading his memories of love and friendship for a kinetic shield that shattered the attackers. The recoil knocked him to his knees. A sharp pain pierced his skull. He looked at Lyra with a blank stare. 'Who are you?' he whispered, the name slipping away like sand through his fingers. Lyra bit her lip, holding back tears. 'I am Lyra. We fight together.' Kael nodded slowly, anchoring himself to her words alone as they pressed deeper into the decaying heart of the realm."
+      },
+      {
+        "title": "The Citadel of Glass",
+        "text": "The citadel loomed ahead, a colossal structure of warped glass and screaming souls suspended in the perpetual twilight. Swarms of void-sentinels guarded the gates, their blades shimmering with toxic energy. Kael unleashed a barrage of crimson spells, burning through his remaining knowledge of combat forms, philosophy, and identity. Each spell carved deeper into his brain, leaving vast craters of amnesia. He moved on pure muscle memory and instinct, slashing through the armor of the sentinels while Lyra wove counter-magic to protect his flank. They fought their way into the central sanctum, where the air hummed with unbearable pressure. In the center of the chamber stood the Architect, draped in a dark velvet cape, an iron mask concealing his features. The Architect laughed, a sound that echoed like shattering glass. 'Welcome, Kael,' the entity rasped, raising a hand crackling with familiar, forgotten magic. Kael charged forward, roaring with the last vestiges of his voice, determined to end the nightmare once and for all."
+      },
+      {
+        "title": "The Mirror of Time",
+        "text": "The final clash shook the foundations of reality. Kael poured his entire remaining essence into a singular, catastrophic spell, trading every lingering memory he possessed to pierce the Architect's defense. A blinding shockwave leveled the sanctum walls. The Architect fell to the floor, his iron mask cracking down the middle. Gasping for air, Kael walked over and ripped the broken mask away. He froze. Staring back at him with hollow grey eyes was an older, scarred version of himself. The Architect smiled bitterly through blood-stained lips. 'To fix the world, I had to break it, Kael. And to stop me, you had to become me.' The truth crashed over Kael like a tidal wave, too late to change his fate. Lyra screamed his name from the ruins, but Kael could no longer remember her face, his mind completely wiped clean. With a hollow, peaceful smile, the lone exorcist turned his back on the dawn of a new cycle, stepping willingly into the eternal dark."
+      }
+    ],
+    "scenes": [
+      {
+        "caption": "Kael unleashes forbidden magic against the wraiths",
+        "image_prompt": "short raven-black hair, hollow grey eyes, wearing a worn leather exorcist coat over tattered steel armor, casting a glowing white magic glyph in a ruined gothic city"
+      },
+      {
+        "caption": "Lyra guides the amnestic Kael through the floating world",
+        "image_prompt": "long braided silver hair, piercing green eyes, intricate runic robes, walking through a desolate landscape of floating stone fragments alongside a grim warrior"
+      },
+      {
+        "caption": "The assault on the Citadel of Glass",
+        "image_prompt": "an epic dark fantasy battle inside a towering palace of warped glass and purple energy, featuring a scarred warrior fighting shadowy sentinels"
+      },
+      {
+        "caption": "The shocking revelation at the climax",
+        "image_prompt": "a scarred exorcist staring in horror at an older masked villain whose face is identical to his own, amidst shattered crystal debris"
+      }
+    ]
+  },
+  "metrics": {
+    "distinct_1": 0.557,
+    "distinct_2": 0.931,
+    "brief_coverage": 0.474,
+    "brief_terms_found": [
+      "exorcist",
+      "forgotten",
+      "lone",
+      "magic",
+      "memory",
+      "shattered",
+      "spell",
+      "truth",
+      "world"
+    ],
+    "brief_terms_missing": [
+      "caster",
+      "costs",
+      "exists",
+      "future",
+      "powers",
+      "protagonist's",
+      "real",
+      "self",
+      "uncover",
+      "villain"
+    ],
+    "character_presence": 1.0,
+    "word_count": 714,
+    "length_ratio": 0.54,
+    "structure_score": 1.0,
+    "llm_calls": 1,
+    "latency_ms": 9325
+  },
+  "human_rating": null,
+  "scenes": [
+    {
+      "index": 1,
+      "caption": "Kael unleashes forbidden magic against the wraiths",
+      "image_prompt": "short raven-black hair, hollow grey eyes, wearing a worn leather exorcist coat over tattered steel armor, casting a glowing white magic glyph in a ruined gothic city. Characters: Kael: short raven-black hair, hollow grey eyes, worn leather exorcist coat over tattered steel armor; Lyra: long braided silver hair, piercing green eyes, intricate runic robes stained with ash; The Architect: completely obscured by a heavy iron mask, glowing violet eyes, sweeping dark velvet cape. Style: polished anime fantasy illustration, wide cinematic scene, characters shown at medium distance within a detailed environment, soft dramatic lighting, moody twilight palette with violet highlights, painterly, beautiful. No close-up faces, no gore, no text, no captions, no watermark."
+    },
+    {
+      "index": 2,
+      "caption": "Lyra guides the amnestic Kael through the floating world",
+      "image_prompt": "long braided silver hair, piercing green eyes, intricate runic robes, walking through a desolate landscape of floating stone fragments alongside a grim warrior. Characters: Kael: short raven-black hair, hollow grey eyes, worn leather exorcist coat over tattered steel armor; Lyra: long braided silver hair, piercing green eyes, intricate runic robes stained with ash; The Architect: completely obscured by a heavy iron mask, glowing violet eyes, sweeping dark velvet cape. Style: polished anime fantasy illustration, wide cinematic scene, characters shown at medium distance within a detailed environment, soft dramatic lighting, moody twilight palette with violet highlights, painterly, beautiful. No close-up faces, no gore, no text, no captions, no watermark."
+    },
+    {
+      "index": 3,
+      "caption": "The assault on the Citadel of Glass",
+      "image_prompt": "an epic dark fantasy battle inside a towering palace of warped glass and purple energy, featuring a scarred warrior fighting shadowy sentinels. Characters: Kael: short raven-black hair, hollow grey eyes, worn leather exorcist coat over tattered steel armor; Lyra: long braided silver hair, piercing green eyes, intricate runic robes stained with ash; The Architect: completely obscured by a heavy iron mask, glowing violet eyes, sweeping dark velvet cape. Style: polished anime fantasy illustration, wide cinematic scene, characters shown at medium distance within a detailed environment, soft dramatic lighting, moody twilight palette with violet highlights, painterly, beautiful. No close-up faces, no gore, no text, no captions, no watermark."
+    },
+    {
+      "index": 4,
+      "caption": "The shocking revelation at the climax",
+      "image_prompt": "a scarred exorcist staring in horror at an older masked villain whose face is identical to his own, amidst shattered crystal debris. Characters: Kael: short raven-black hair, hollow grey eyes, worn leather exorcist coat over tattered steel armor; Lyra: long braided silver hair, piercing green eyes, intricate runic robes stained with ash; The Architect: completely obscured by a heavy iron mask, glowing violet eyes, sweeping dark velvet cape. Style: polished anime fantasy illustration, wide cinematic scene, characters shown at medium distance within a detailed environment, soft dramatic lighting, moody twilight palette with violet highlights, painterly, beautiful. No close-up faces, no gore, no text, no captions, no watermark."
+    }
+  ]
+}

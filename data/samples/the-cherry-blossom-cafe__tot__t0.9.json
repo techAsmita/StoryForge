@@ -1,0 +1,230 @@
+{
+  "title": "Blossom Brews and Hidden Notes",
+  "idea": {
+    "protagonist": "A shy café owner who can hear what people's coffee orders really mean",
+    "goal": "Save the café from closing before the cherry blossom festival",
+    "genre": "Slice of Life",
+    "world_rule": "The gift only works on strangers, never on people she loves",
+    "ending_twist": "The rival café owner was her childhood pen pal all along"
+  },
+  "plot": {
+    "tone": 90,
+    "conflict": 30,
+    "romance": 90,
+    "action": 10,
+    "length": 40
+  },
+  "sampling": {
+    "temperature": 0.9,
+    "top_p": 0.95,
+    "top_k": 40,
+    "max_output_tokens": 4096,
+    "seed": null
+  },
+  "strategy": "tot",
+  "provider": "gemini",
+  "model": "gemini-3.5-flash-lite",
+  "created_at": "2026-11-24T08:17:52.174921+05:30",
+  "prompts": [
+    {
+      "step": "branches",
+      "prompt": "STORY BRIEF\n- Protagonist: A shy café owner who can hear what people's coffee orders really mean\n- Goal: Save the café from closing before the cherry blossom festival\n- Genre: Slice of Life\n- World rule (must matter to the plot): The gift only works on strangers, never on people she loves\n- Ending twist (reveal near the climax, set it up earlier): The rival café owner was her childhood pen pal all along\n- Tone: light and hopeful (90/100 toward light)\n- Conflict level: low (30/100)\n- Romance: central (90/100)\n- Action intensity: low (10/100)\n- Length: 4 chapters of about 270 words each\n\nPropose 3 clearly different plot branches for this story. Score each from 1-10 on originality, coherence and fit_to_brief, then choose the best one.\nReturn JSON: {\"branches\": [{\"id\": \"A\"|\"B\"|\"C\", \"premise\": string, \"scores\": {\"originality\": int, \"coherence\": int, \"fit_to_brief\": int}}], \"selected\": \"A\"|\"B\"|\"C\", \"reason\": string}",
+      "latency_ms": 8379.8
+    },
+    {
+      "step": "write",
+      "prompt": "STORY BRIEF\n- Protagonist: A shy café owner who can hear what people's coffee orders really mean\n- Goal: Save the café from closing before the cherry blossom festival\n- Genre: Slice of Life\n- World rule (must matter to the plot): The gift only works on strangers, never on people she loves\n- Ending twist (reveal near the climax, set it up earlier): The rival café owner was her childhood pen pal all along\n- Tone: light and hopeful (90/100 toward light)\n- Conflict level: low (30/100)\n- Romance: central (90/100)\n- Action intensity: low (10/100)\n- Length: 4 chapters of about 270 words each\n\nSELECTED PLOT BRANCH (A): Aoi uses her stranger-reading gift to tailor the perfect cherry blossom latte for a cold, mysterious new rival café owner, slowly uncovering his hidden identity as her childhood pen pal just as she saves her shop.\n\nWrite the story. Return JSON with this schema:\n{\n  \"title\": string,\n  \"logline\": string (2-3 sentence teaser),\n  \"characters\": [{\"name\": string, \"role\": \"protagonist\"|\"ally\"|\"rival\"|\"villain\"|\"mentor\"|\"other\",\n                  \"visual_description\": string (hair, eyes, outfit; reused for every image)}]  (3-5 items),\n  \"relationships\": [{\"source\": name, \"target\": name, \"label\": short string like \"ALLY\", \"CONFLICT\"}],\n  \"beats\": [{\"name\": one of \"Inciting Incident\",\"Call to Action\",\"Rising Conflict\",\"Midpoint Turn\",\"Climax\",\"Resolution\",\n             \"summary\": one sentence}]  (exactly 6, in that order),\n  \"chapters\": [{\"title\": short title WITHOUT \"Chapter\" or a number, \"text\": string}],\n  \"scenes\": [{\"caption\": short string, \"image_prompt\": visual description of one key moment, no dialogue}]  (exactly 4)\n}",
+      "latency_ms": 7840.9
+    }
+  ],
+  "intermediate_steps": {
+    "branches": {
+      "branches": [
+        {
+          "id": "A",
+          "premise": "Aoi uses her stranger-reading gift to tailor the perfect cherry blossom latte for a cold, mysterious new rival café owner, slowly uncovering his hidden identity as her childhood pen pal just as she saves her shop.",
+          "scores": {
+            "originality": 8,
+            "coherence": 9,
+            "fit_to_brief": 10
+          }
+        },
+        {
+          "id": "B",
+          "premise": "Aoi accidentally misreads a regular customer's order meaning, leading her to team up with the arrogant rival owner who secretly sends patrons to help her shop survive the spring rush.",
+          "scores": {
+            "originality": 6,
+            "coherence": 7,
+            "fit_to_brief": 8
+          }
+        },
+        {
+          "id": "C",
+          "premise": "Aoi hosts a blind-date coffee event to boost sales, where the rival café owner poses as a stranger so she can use her gift on him, unknowingly falling in love all over again.",
+          "scores": {
+            "originality": 7,
+            "coherence": 8,
+            "fit_to_brief": 9
+          }
+        }
+      ],
+      "selected": "A",
+      "reason": "Branch A perfectly integrates the world rule, romance focus, and the pen pal twist through natural character interaction with the rival."
+    }
+  },
+  "output": {
+    "title": "Blossom Brews and Hidden Notes",
+    "logline": "Shy café owner Aoi uses her magical gift of reading strangers' true desires through their coffee orders to save her shop. Along the way, she brews a sweet romance with a mysterious rival who turns out to be her long-lost childhood pen pal.",
+    "characters": [
+      {
+        "name": "Aoi",
+        "role": "protagonist",
+        "visual_description": "Short messy dark hair, warm brown eyes, wearing a pastel green apron over a cream sweater."
+      },
+      {
+        "name": "Ren",
+        "role": "rival",
+        "visual_description": "Neatly styled silver-grey hair, piercing blue eyes, wearing a sleek modern black barista uniform."
+      },
+      {
+        "name": "Hana",
+        "role": "ally",
+        "visual_description": "Bright orange hair in twin ponytails, energetic hazel eyes, wearing a yellow polka-dot cafe dress."
+      }
+    ],
+    "relationships": [
+      {
+        "source": "Aoi",
+        "target": "Ren",
+        "label": "RIVALRY_TO_ROMANCE"
+      },
+      {
+        "source": "Aoi",
+        "target": "Hana",
+        "label": "BEST_FRIEND"
+      }
+    ],
+    "beats": [
+      {
+        "name": "Inciting Incident",
+        "summary": "Aoi discovers her café is facing imminent closure before the upcoming cherry blossom festival."
+      },
+      {
+        "name": "Call to Action",
+        "summary": "A handsome rival café opens across the street, threatening to steal Aoi's remaining customers."
+      },
+      {
+        "name": "Rising Conflict",
+        "summary": "Aoi uses her gift to decode the true emotional needs behind her customers' bizarre coffee orders."
+      },
+      {
+        "name": "Midpoint Turn",
+        "summary": "Aoi serves the mysterious rival a custom cherry blossom latte based on his whispered coffee truth."
+      },
+      {
+        "name": "Climax",
+        "summary": "Ren reveals a childhood letter matching Aoi's old pen pal letters, saving the café together."
+      },
+      {
+        "name": "Resolution",
+        "summary": "The café thrives during the cherry blossom festival as Aoi and Ren brew coffee side by side."
+      }
+    ],
+    "chapters": [
+      {
+        "title": "The Bitter Aroma of Debt",
+        "text": "Cherry blossoms usually brought joy to Sakura Street, but this spring, Aoi only felt dread. Her cozy little café, Petal & Mug, was teetering on the edge of bankruptcy. 'Just two weeks until the festival,' Hana sighed, wiping down the counter. 'If we don't boost sales, we're done.' Aoi nodded miserably. She possessed a strange, quiet secret: whenever a stranger ordered a drink, she could hear the unspoken emotional truth behind their words. A black coffee meant a desperate need for comfort; a sweet mocha meant craving warmth. Yet, this gift had a frustrating limitation—it never worked on people she already loved, only complete strangers. Suddenly, the bell above the door chimed, cutting through her thoughts. A tall, sharply dressed young man with striking silver hair stepped inside, casting a cool shadow over the wooden floorboards. It was Ren, the owner of the flashy new modern café across the street. He didn't look like a typical customer; he looked like an impending storm. Aoi’s heart hammered against her ribs. She gripped the edge of the counter, bracing herself for whatever corporate rivalry he had brought through her doorway. The scent of roasted beans filled the air, thick with tension."
+      },
+      {
+        "title": "Decoding the Stranger",
+        "text": "Ren walked up to the counter, his expression unreadable. Aoi swallowed hard, activating her latent ability to listen past his words. He cleared his throat and ordered the most mundane item possible: a plain, hot black coffee, no sugar, no milk. But the moment the words left his lips, Aoi's gift whispered the truth echoing inside his mind. He wasn't looking for a caffeine kick at all. Beneath his stern, professional exterior, his inner voice cried out for something sweet, something reminiscent of a forgotten spring afternoon in his childhood. He was lonely, burnt out, and desperately craving a touch of genuine nostalgia. Aoi blinked in surprise. The fierce rival across the street was just a tired soul wearing armor. Instead of handing him the bitter brew he asked for, inspiration struck. She decided to use her gift to craft a beverage tailored precisely to his hidden emotional landscape. She steamed local milk infused with salted cherry blossoms and swirled a hint of sweet white chocolate into the cup. 'One special house blend, on the house,' Aoi said softly, sliding the gorgeous, pink-frosted latte across the wooden counter toward him. Ren paused, staring down at the unexpected drink with wide, searching eyes."
+      },
+      {
+        "title": "The Sweet Taste of Memory",
+        "text": "Ren stared at the cherry blossom latte, the steam curling delicately between them. He took a hesitant sip, and as the sweet floral flavor hit his tongue, his shoulders visibly relaxed. The cold, distant aura melted away, replaced by a soft, wistful expression. 'How did you know?' Ren murmured, his voice losing its professional edge. 'Nobody gets this right. It tastes just like the tea my childhood pen pal used to describe in her letters.' Aoi froze. The words struck her like a physical blow. Childhood pen pal? She had spent years writing heartfelt letters to a boy across the country, sharing dreams beneath falling cherry blossoms, before they inexplicably lost touch. But her gift had never worked on him because, unbeknownst to her until this very second, the stranger standing before her was actually her dearest childhood connection. The realization washed over her in a warm wave of emotion. Ren reached into his coat pocket and pulled out a worn, folded piece of paper—an old letter written in Aoi's distinct handwriting from a decade ago. He looked up, meeting her eyes with a profound, stirring tenderness. 'I opened my café here hoping to find you again, Aoi,' he confessed softly, the café around them fading into the background."
+      },
+      {
+        "title": "Blooming Together",
+        "text": "With the mystery solved and their hearts finally aligned, the rivalry between the two cafés dissolved into a sweet partnership just in time for the festival. Petal & Mug was packed to the brim with cheerful customers, drawn in by the magical aroma of Aoi and Ren's newly combined menu items. Outside, the cherry blossoms burst into full bloom, painting the entire street in breathtaking shades of pink and white. Hana laughed from behind the pastry case, watching Aoi and Ren hand-deliver a matching pair of cherry blossom lattes to a smiling couple at the corner table. Ren caught Aoi's gaze across the bustling room and flashed a genuine, dazzling smile that made her cheeks burn brighter than the spring petals. She didn't need her stranger-reading gift to know what he was thinking right now; the warmth in his eyes said everything she would ever need to hear. As they clinked their coffee pitchers together in celebration of the saved shop, Aoi realized her greatest fear had bloomed into her happiest beginning. The café was safe, her future was bright, and her favorite stranger was finally home to stay."
+      }
+    ],
+    "scenes": [
+      {
+        "caption": "Aoi nervously greeting the mysterious new rival Ren inside her struggling café.",
+        "image_prompt": "A shy girl with short dark hair in a green apron standing behind a wooden counter, looking anxiously at a tall silver-haired man in a black barista uniform entering a cozy café."
+      },
+      {
+        "caption": "Aoi secretly listening to the hidden desires behind Ren's plain coffee order.",
+        "image_prompt": "Close-up of a barista listening intently as a handsome customer orders black coffee, with glowing magical musical notes floating softly between them."
+      },
+      {
+        "caption": "Ren tasting the custom cherry blossom latte and showing a rare, gentle expression.",
+        "image_prompt": "A handsome silver-haired man holding a pink frosted latte with cherry blossom art, looking surprised and touched inside a sunlit café."
+      },
+      {
+        "caption": "Aoi and Ren smiling together behind the counter as cherry blossoms fall outside.",
+        "image_prompt": "A happy young couple of baristas working side by side in a bustling café, framed by large windows showing blooming pink cherry blossom trees outside."
+      }
+    ]
+  },
+  "metrics": {
+    "distinct_1": 0.539,
+    "distinct_2": 0.941,
+    "brief_coverage": 0.727,
+    "brief_terms_found": [
+      "along",
+      "blossom",
+      "cherry",
+      "childhood",
+      "coffee",
+      "festival",
+      "gift",
+      "hear",
+      "never",
+      "only",
+      "orders",
+      "owner",
+      "people",
+      "rival",
+      "save",
+      "strangers"
+    ],
+    "brief_terms_missing": [
+      "closing",
+      "loves",
+      "mean",
+      "people's",
+      "really",
+      "works"
+    ],
+    "character_presence": 0.833,
+    "word_count": 810,
+    "length_ratio": 0.75,
+    "structure_score": 1.0,
+    "llm_calls": 2,
+    "latency_ms": 16221
+  },
+  "human_rating": null,
+  "scenes": [
+    {
+      "index": 1,
+      "caption": "Aoi nervously greeting the mysterious new rival Ren inside her struggling café.",
+      "image_prompt": "A shy girl with short dark hair in a green apron standing behind a wooden counter, looking anxiously at a tall silver-haired man in a black barista uniform entering a cozy café.. Characters: Aoi: Short messy dark hair, warm brown eyes, wearing a pastel green apron over a cream sweater.; Ren: Neatly styled silver-grey hair, piercing blue eyes, wearing a sleek modern black barista uniform.; Hana: Bright orange hair in twin ponytails, energetic hazel eyes, wearing a yellow polka-dot cafe dress.. Style: polished anime fantasy illustration, wide cinematic scene, characters shown at medium distance within a detailed environment, soft dramatic lighting, warm vibrant palette, soft golden light, painterly, beautiful. No close-up faces, no gore, no text, no captions, no watermark."
+    },
+    {
+      "index": 2,
+      "caption": "Aoi secretly listening to the hidden desires behind Ren's plain coffee order.",
+      "image_prompt": "Close-up of a barista listening intently as a handsome customer orders black coffee, with glowing magical musical notes floating softly between them.. Characters: Aoi: Short messy dark hair, warm brown eyes, wearing a pastel green apron over a cream sweater.; Ren: Neatly styled silver-grey hair, piercing blue eyes, wearing a sleek modern black barista uniform.; Hana: Bright orange hair in twin ponytails, energetic hazel eyes, wearing a yellow polka-dot cafe dress.. Style: polished anime fantasy illustration, wide cinematic scene, characters shown at medium distance within a detailed environment, soft dramatic lighting, warm vibrant palette, soft golden light, painterly, beautiful. No close-up faces, no gore, no text, no captions, no watermark."
+    },
+    {
+      "index": 3,
+      "caption": "Ren tasting the custom cherry blossom latte and showing a rare, gentle expression.",
+      "image_prompt": "A handsome silver-haired man holding a pink frosted latte with cherry blossom art, looking surprised and touched inside a sunlit café.. Characters: Aoi: Short messy dark hair, warm brown eyes, wearing a pastel green apron over a cream sweater.; Ren: Neatly styled silver-grey hair, piercing blue eyes, wearing a sleek modern black barista uniform.; Hana: Bright orange hair in twin ponytails, energetic hazel eyes, wearing a yellow polka-dot cafe dress.. Style: polished anime fantasy illustration, wide cinematic scene, characters shown at medium distance within a detailed environment, soft dramatic lighting, warm vibrant palette, soft golden light, painterly, beautiful. No close-up faces, no gore, no text, no captions, no watermark."
+    },
+    {
+      "index": 4,
+      "caption": "Aoi and Ren smiling together behind the counter as cherry blossoms fall outside.",
+      "image_prompt": "A happy young couple of baristas working side by side in a bustling café, framed by large windows showing blooming pink cherry blossom trees outside.. Characters: Aoi: Short messy dark hair, warm brown eyes, wearing a pastel green apron over a cream sweater.; Ren: Neatly styled silver-grey hair, piercing blue eyes, wearing a sleek modern black barista uniform.; Hana: Bright orange hair in twin ponytails, energetic hazel eyes, wearing a yellow polka-dot cafe dress.. Style: polished anime fantasy illustration, wide cinematic scene, characters shown at medium distance within a detailed environment, soft dramatic lighting, warm vibrant palette, soft golden light, painterly, beautiful. No close-up faces, no gore, no text, no captions, no watermark."
+    }
+  ]
+}

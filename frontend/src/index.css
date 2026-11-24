@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-display: "Plus Jakarta Sans", "Inter", sans-serif;
+  --color-night: #0b0919;
+  --color-panel: #151130;
+  --color-muted: #9b94bd;
+}
+
+html,
+body {
+  overscroll-behavior: none;
+}
+
+body {
+  background: var(--color-night);
+  color: #e7e3f7;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Glass card used across pages */
+.card {
+  background: linear-gradient(180deg, rgba(30, 24, 62, 0.72), rgba(20, 16, 44, 0.78));
+  border: 1px solid rgba(167, 139, 250, 0.14);
+  border-radius: 18px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+}
+.card-inner {
+  background: rgba(14, 11, 34, 0.7);
+  border: 1px solid rgba(167, 139, 250, 0.12);
+  border-radius: 14px;
+}
+
+.field {
+  width: 100%;
+  background: rgba(10, 8, 26, 0.85);
+  border: 1px solid rgba(167, 139, 250, 0.18);
+  border-radius: 12px;
+  padding: 0.7rem 0.9rem;
+  font-size: 0.9rem;
+  color: #f1edff;
+  outline: none;
+  resize: none;
+  transition: border-color .15s, box-shadow .15s;
+}
+.field::placeholder { color: #6f6992; }
+.field:focus { border-color: #8b5cf6; box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.18); }
+
+/* Select: native arrow hidden, our chevron sits a little in from the right edge */
+.select { appearance: none; -webkit-appearance: none; padding-right: 2.75rem; cursor: pointer; }
+
+/* Slider */
+input[type="range"].slider {
+  -webkit-appearance: none; appearance: none; width: 100%; height: 4px; border-radius: 4px;
+  background: linear-gradient(90deg, #8b5cf6 var(--pct), rgba(167, 139, 250, 0.18) var(--pct));
+}
+input[type="range"].slider::-webkit-slider-thumb {
+  -webkit-appearance: none; width: 16px; height: 16px; border-radius: 50%;
+  background: #c4b5fd; border: 3px solid #7c3aed; box-shadow: 0 0 10px rgba(139, 92, 246, .6); cursor: pointer;
+}
+input[type="range"].slider::-moz-range-thumb {
+  width: 12px; height: 12px; border-radius: 50%; background: #c4b5fd; border: 3px solid #7c3aed;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #7c3aed, #a855f7);
+  box-shadow: 0 8px 30px rgba(139, 92, 246, 0.35);
+}
+.btn-primary:hover { filter: brightness(1.08); }
+.btn-primary:disabled { filter: grayscale(.4) brightness(.7); box-shadow: none; cursor: not-allowed; }
+
+.scroll-thin { overscroll-behavior: contain; }
+.scroll-thin::-webkit-scrollbar { width: 6px; height: 6px; }
+.scroll-thin::-webkit-scrollbar-thumb { background: rgba(139, 92, 246, 0.35); border-radius: 6px; }
+
+.shimmer {
+  background: linear-gradient(100deg, rgba(40, 32, 80, .6) 30%, rgba(90, 70, 160, .35) 50%, rgba(40, 32, 80, .6) 70%);
+  background-size: 200% 100%;
+  animation: shimmer 1.6s linear infinite;
+}
+@keyframes shimmer { to { background-position: -200% 0; } }
+
+/* Headings use the display face; story titles use the serif (font-serif) at a heavier weight.
+   In @layer base so Tailwind utility classes like font-serif still win. */
+@layer base {
+  h1, h2 { font-family: var(--font-display); }
+}
+.font-serif { font-weight: 700; letter-spacing: -0.01em; }
+
+.no-scrollbar { scrollbar-width: none; overscroll-behavior-x: contain; }
+.no-scrollbar::-webkit-scrollbar { display: none; }

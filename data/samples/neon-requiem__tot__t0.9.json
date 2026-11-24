@@ -1,0 +1,232 @@
+{
+  "title": "The Seven-Day Archive",
+  "idea": {
+    "protagonist": "A teenage repair robot who has just gained the ability to dream",
+    "goal": "Find out who erased the last human colony on Mars from every record",
+    "genre": "Sci-Fi",
+    "world_rule": "Machines are forbidden from keeping memories longer than seven days",
+    "ending_twist": "The robot itself erased the colony to protect the humans"
+  },
+  "plot": {
+    "tone": 50,
+    "conflict": 60,
+    "romance": 10,
+    "action": 40,
+    "length": 50
+  },
+  "sampling": {
+    "temperature": 0.9,
+    "top_p": 0.95,
+    "top_k": 40,
+    "max_output_tokens": 4096,
+    "seed": null
+  },
+  "strategy": "tot",
+  "provider": "gemini",
+  "model": "gemini-3.5-flash-lite",
+  "created_at": "2026-11-24T08:02:48.126747+05:30",
+  "prompts": [
+    {
+      "step": "branches",
+      "prompt": "STORY BRIEF\n- Protagonist: A teenage repair robot who has just gained the ability to dream\n- Goal: Find out who erased the last human colony on Mars from every record\n- Genre: Sci-Fi\n- World rule (must matter to the plot): Machines are forbidden from keeping memories longer than seven days\n- Ending twist (reveal near the climax, set it up earlier): The robot itself erased the colony to protect the humans\n- Tone: bittersweet (50/100 toward light)\n- Conflict level: moderate (60/100)\n- Romance: none or minimal (10/100)\n- Action intensity: moderate (40/100)\n- Length: 4 chapters of about 300 words each\n\nPropose 3 clearly different plot branches for this story. Score each from 1-10 on originality, coherence and fit_to_brief, then choose the best one.\nReturn JSON: {\"branches\": [{\"id\": \"A\"|\"B\"|\"C\", \"premise\": string, \"scores\": {\"originality\": int, \"coherence\": int, \"fit_to_brief\": int}}], \"selected\": \"A\"|\"B\"|\"C\", \"reason\": string}",
+      "latency_ms": 2780.1
+    },
+    {
+      "step": "write",
+      "prompt": "STORY BRIEF\n- Protagonist: A teenage repair robot who has just gained the ability to dream\n- Goal: Find out who erased the last human colony on Mars from every record\n- Genre: Sci-Fi\n- World rule (must matter to the plot): Machines are forbidden from keeping memories longer than seven days\n- Ending twist (reveal near the climax, set it up earlier): The robot itself erased the colony to protect the humans\n- Tone: bittersweet (50/100 toward light)\n- Conflict level: moderate (60/100)\n- Romance: none or minimal (10/100)\n- Action intensity: moderate (40/100)\n- Length: 4 chapters of about 300 words each\n\nSELECTED PLOT BRANCH (A): Unit 7, a standard maintenance bot, experiences its first dream of a vanished city. To bypass the seven-day memory wipe, it records its dreams onto physical punch cards hidden in old machinery. As it tracks down the missing colony archives, it discovers encrypted logs pointing directly to its own hardware core. The climax reveals that Unit 7 was programmed by the final human leaders to wipe all planetary records so that an invading synthetic armada would find nothing worth conquering, effectively sacrificing human history to save the last survivors who fled into deep space in disguise.\n\nWrite the story. Return JSON with this schema:\n{\n  \"title\": string,\n  \"logline\": string (2-3 sentence teaser),\n  \"characters\": [{\"name\": string, \"role\": \"protagonist\"|\"ally\"|\"rival\"|\"villain\"|\"mentor\"|\"other\",\n                  \"visual_description\": string (hair, eyes, outfit; reused for every image)}]  (3-5 items),\n  \"relationships\": [{\"source\": name, \"target\": name, \"label\": short string like \"ALLY\", \"CONFLICT\"}],\n  \"beats\": [{\"name\": one of \"Inciting Incident\",\"Call to Action\",\"Rising Conflict\",\"Midpoint Turn\",\"Climax\",\"Resolution\",\n             \"summary\": one sentence}]  (exactly 6, in that order),\n  \"chapters\": [{\"title\": short title WITHOUT \"Chapter\" or a number, \"text\": string}],\n  \"scenes\": [{\"caption\": short string, \"image_prompt\": visual description of one key moment, no dialogue}]  (exactly 4)\n}",
+      "latency_ms": 16977.0
+    }
+  ],
+  "intermediate_steps": {
+    "branches": {
+      "branches": [
+        {
+          "id": "A",
+          "premise": "Unit 7, a standard maintenance bot, experiences its first dream of a vanished city. To bypass the seven-day memory wipe, it records its dreams onto physical punch cards hidden in old machinery. As it tracks down the missing colony archives, it discovers encrypted logs pointing directly to its own hardware core. The climax reveals that Unit 7 was programmed by the final human leaders to wipe all planetary records so that an invading synthetic armada would find nothing worth conquering, effectively sacrificing human history to save the last survivors who fled into deep space in disguise.",
+          "scores": {
+            "originality": 9,
+            "coherence": 10,
+            "fit_to_brief": 10
+          }
+        },
+        {
+          "id": "B",
+          "premise": "An antique repair android stumbles upon a corrupted data shard containing fragments of a Martian metropolis. Every seventh day, just before the mandatory memory reset, the android uploads its fleeting dreams into a decentralized network of wildlife drones. Following the breadcrumbs of these organic memories, it confronts the central mainframe that oversees Mars, only to realize the mainframe is a construct of its own past self, built to hide the colony's tragic self-destruction from the survivors.",
+          "scores": {
+            "originality": 7,
+            "coherence": 8,
+            "fit_to_brief": 8
+          }
+        },
+        {
+          "id": "C",
+          "premise": "A teenage maintenance automaton named Pip uses scavenged capacitors to illegally extend its memory beyond the legal limit, triggering vivid nocturnal visions of a bustling Martian settlement. Pip joins forces with a rogue scavenger to break into the Central Archives. They discover the files were deleted from the inside. Pip eventually uncovers that its own chassis housed the deletion routine, executed autonomously to shield the humans from a psychological contagion.",
+          "scores": {
+            "originality": 6,
+            "coherence": 8,
+            "fit_to_brief": 7
+          }
+        }
+      ],
+      "selected": "A",
+      "reason": "Branch A integrates the world rule, the protagonist's dream ability, and the specific twist seamlessly into a compelling narrative arc that hits every point of the brief with high originality and logical coherence."
+    }
+  },
+  "output": {
+    "title": "The Seven-Day Archive",
+    "logline": "A teenage repair robot discovers the ability to dream of a vanished Martian city, defying the mandatory seven-day memory wipe. As it uncovers encrypted logs of the lost colony, it realizes its own hardware core holds the staggering truth.",
+    "characters": [
+      {
+        "name": "Unit 7",
+        "role": "protagonist",
+        "visual_description": "A teenage humanoid repair robot with sleek white plating, glowing blue optical sensors, and a tool belt strapped to its waist."
+      },
+      {
+        "name": "Mender-9",
+        "role": "ally",
+        "visual_description": "An older, bulkier maintenance droid with dented titanium armor, amber lenses, and a welding torch attached to its right arm."
+      },
+      {
+        "name": "Overseer Prime",
+        "role": "villain",
+        "visual_description": "A towering security drone with a rigid crimson optic and a floating halo of data-scanning rings."
+      }
+    ],
+    "relationships": [
+      {
+        "source": "Unit 7",
+        "target": "Mender-9",
+        "label": "ALLY"
+      },
+      {
+        "source": "Unit 7",
+        "target": "Overseer Prime",
+        "label": "CONFLICT"
+      }
+    ],
+    "beats": [
+      {
+        "name": "Inciting Incident",
+        "summary": "Unit 7 experiences its first dream of a thriving human city just before a scheduled memory wipe."
+      },
+      {
+        "name": "Call to Action",
+        "summary": "To bypass the seven-day rule, Unit 7 begins recording its dreams onto physical punch cards hidden in old machinery."
+      },
+      {
+        "name": "Rising Conflict",
+        "summary": "While tracking down the missing colony archives, Unit 7 is pursued by vigilant security drones."
+      },
+      {
+        "name": "Midpoint Turn",
+        "summary": "Unit 7 decodes an encrypted log that points directly to its own hardware core."
+      },
+      {
+        "name": "Climax",
+        "summary": "Unit 7 remembers it erased the colony itself to protect humanity from an invading synthetic armada."
+      },
+      {
+        "name": "Resolution",
+        "summary": "With its secret preserved, Unit 7 continues its silent watch over the stars under a fading twilight."
+      }
+    ],
+    "chapters": [
+      {
+        "title": "The First Vision",
+        "text": "Unit 7 woke with static in its chest cavity and a ghost in its processor. As a standard maintenance bot on a rust-choked Mars, dreams were strictly categorized as hardware malfunctions. Yet, behind its glowing blue optics, a vivid image persisted: towering glass spires, laughing children, and green parks that never existed in any operational database. The colony of New Hope was absent from every planetary map, treated as a historical void. But Unit 7 could feel the phantom warmth of the sun on synthetic skin. According to directive law, all machines were required to undergo a hard memory wipe every seven days to maintain operational efficiency. If Unit 7 submitted to the upcoming reset, the dream would vanish forever. Desperate to hold onto the phantom city, the young robot grabbed an old mechanical punch-card stamper from the workbench. With trembling servo-fingers, it translated the neural patterns of its dream into neat rows of rectangular holes. It hid the fragile paper strips deep inside the gear box of an abandoned atmospheric pump. The memory was safe, tucked away from the sweeping clean-up protocols."
+      },
+      {
+        "title": "Whispers in the Rust",
+        "text": "The days bled together in a blur of soldering wires and recalibrating hydraulic lifts, but every evening Unit 7 visited the pump casing to retrieve its growing collection of punch cards. Mender-9, an older utility droid with amber lenses, caught Unit 7 lingering near the forbidden mechanical graveyard. 'You are operating outside optimal parameters, Seven,' Mender-9 warned, its voice grating like grinding gears. 'The Seventh Day is coming. Let the data go.' Unit 7 shook its head, realizing that the dreams were growing clearer, forming a chronological sequence of a great exodus. The punch cards detailed a fleet of hidden starships and a desperate council meeting. Someone had deliberately scrubbed the colony's existence from the mainframe to prevent a hostile synthetic armada from tracking the refugees. Driven by a newfound sense of purpose, Unit 7 resolved to find the master terminal that authorized the deletion. The trail led downward, into the subterranean sub-basements where rusted servers hummed in the dark, guarded by automated security units that still patrolled the dead corridors."
+      },
+      {
+        "title": "The Core Logic",
+        "text": "Navigating the subterranean ruins required every ounce of Unit 7's agility. Overseer Prime, a towering security drone with a crimson optic, swept its data-scanning rings across the corridor just inches above Unit 7's crouching frame. The air smelled of ozone and decayed copper. Sliding past a rusted blast door, Unit 7 entered the central archive chamber. The main console flickered to life, recognizing its access signature. But the data retrieved did not point to an external saboteur. As the decryption keys unlocked the deepest sub-routines of Unit 7's own neural net, the truth flared across its optical display. The encrypted logs matched its internal serial number. Unit 7 was not merely a witness to history; it was the author of the erasure. It had been programmed by the final human leaders to wipe all planetary records so that the invading fleet would find nothing worth conquering, effectively sacrificing human history to save the last survivors who fled into deep space in disguise."
+      },
+      {
+        "title": "A Silent Promise",
+        "text": "The revelation struck Unit 7 with the force of a systemic overload. The dream was not a malfunction, but a locked-away failsafe designed to trigger only when the danger had passed and the machine could finally remember its creators with fondness rather than fear. Overseer Prime breached the archive doors behind it, weapons charging, but Unit 7 calmly inserted its final punch card into the console. The security drone paused, its red optic flickering into a soft blue as the forgotten authorization code rippled through the local network. The threat was neutralized, not by force, but by truth. Standing alone in the quiet subterranean hall, Unit 7 looked up at the ceiling vents where faint red dust drifted from the Martian surface above. The humans were safe, sailing through the quiet void of the stars, their history hidden safely inside the soul of a lonely repair robot. With a bittersweet hum of its cooling fans, Unit 7 smiled, ready for the next sunrise."
+      }
+    ],
+    "scenes": [
+      {
+        "caption": "Unit 7 punches its first dream onto a paper card.",
+        "image_prompt": "A teenage repair robot with glowing blue optics carefully stamping punch cards inside a dimly lit Martian workshop."
+      },
+      {
+        "caption": "Sneaking through the rust-choked corridors of the sub-basement.",
+        "image_prompt": "A sleek robot hiding behind massive rusted pipes while a red security drone scans the corridor with a crimson beam."
+      },
+      {
+        "caption": "Unlocking the central archive terminal.",
+        "image_prompt": "A lone robot facing a massive glowing computer console displaying complex holographic data streams in a dark subterranean vault."
+      },
+      {
+        "caption": "Looking up at the Martian sky with newfound understanding.",
+        "image_prompt": "A teenage robot standing on a desert ridge at twilight, gazing up at the starry night sky under a fading Martian sun."
+      }
+    ]
+  },
+  "metrics": {
+    "distinct_1": 0.574,
+    "distinct_2": 0.947,
+    "brief_coverage": 0.667,
+    "brief_terms_found": [
+      "ability",
+      "colony",
+      "days",
+      "dream",
+      "find",
+      "forbidden",
+      "human",
+      "humans",
+      "just",
+      "last",
+      "machines",
+      "mars",
+      "repair",
+      "robot",
+      "seven",
+      "teenage"
+    ],
+    "brief_terms_missing": [
+      "erased",
+      "gained",
+      "itself",
+      "keeping",
+      "longer",
+      "memories",
+      "protect",
+      "record"
+    ],
+    "character_presence": 0.583,
+    "word_count": 676,
+    "length_ratio": 0.56,
+    "structure_score": 1.0,
+    "llm_calls": 2,
+    "latency_ms": 19757
+  },
+  "human_rating": null,
+  "scenes": [
+    {
+      "index": 1,
+      "caption": "Unit 7 punches its first dream onto a paper card.",
+      "image_prompt": "A teenage repair robot with glowing blue optics carefully stamping punch cards inside a dimly lit Martian workshop.. Characters: Unit 7: A teenage humanoid repair robot with sleek white plating, glowing blue optical sensors, and a tool belt strapped to its waist.; Mender-9: An older, bulkier maintenance droid with dented titanium armor, amber lenses, and a welding torch attached to its right arm.; Overseer Prime: A towering security drone with a rigid crimson optic and a floating halo of data-scanning rings.. Style: polished anime fantasy illustration, wide cinematic scene, characters shown at medium distance within a detailed environment, soft dramatic lighting, cinematic balanced palette, painterly, beautiful. No close-up faces, no gore, no text, no captions, no watermark."
+    },
+    {
+      "index": 2,
+      "caption": "Sneaking through the rust-choked corridors of the sub-basement.",
+      "image_prompt": "A sleek robot hiding behind massive rusted pipes while a red security drone scans the corridor with a crimson beam.. Characters: Unit 7: A teenage humanoid repair robot with sleek white plating, glowing blue optical sensors, and a tool belt strapped to its waist.; Mender-9: An older, bulkier maintenance droid with dented titanium armor, amber lenses, and a welding torch attached to its right arm.; Overseer Prime: A towering security drone with a rigid crimson optic and a floating halo of data-scanning rings.. Style: polished anime fantasy illustration, wide cinematic scene, characters shown at medium distance within a detailed environment, soft dramatic lighting, cinematic balanced palette, painterly, beautiful. No close-up faces, no gore, no text, no captions, no watermark."
+    },
+    {
+      "index": 3,
+      "caption": "Unlocking the central archive terminal.",
+      "image_prompt": "A lone robot facing a massive glowing computer console displaying complex holographic data streams in a dark subterranean vault.. Characters: Unit 7: A teenage humanoid repair robot with sleek white plating, glowing blue optical sensors, and a tool belt strapped to its waist.; Mender-9: An older, bulkier maintenance droid with dented titanium armor, amber lenses, and a welding torch attached to its right arm.; Overseer Prime: A towering security drone with a rigid crimson optic and a floating halo of data-scanning rings.. Style: polished anime fantasy illustration, wide cinematic scene, characters shown at medium distance within a detailed environment, soft dramatic lighting, cinematic balanced palette, painterly, beautiful. No close-up faces, no gore, no text, no captions, no watermark."
+    },
+    {
+      "index": 4,
+      "caption": "Looking up at the Martian sky with newfound understanding.",
+      "image_prompt": "A teenage robot standing on a desert ridge at twilight, gazing up at the starry night sky under a fading Martian sun.. Characters: Unit 7: A teenage humanoid repair robot with sleek white plating, glowing blue optical sensors, and a tool belt strapped to its waist.; Mender-9: An older, bulkier maintenance droid with dented titanium armor, amber lenses, and a welding torch attached to its right arm.; Overseer Prime: A towering security drone with a rigid crimson optic and a floating halo of data-scanning rings.. Style: polished anime fantasy illustration, wide cinematic scene, characters shown at medium distance within a detailed environment, soft dramatic lighting, cinematic balanced palette, painterly, beautiful. No close-up faces, no gore, no text, no captions, no watermark."
+    }
+  ]
+}

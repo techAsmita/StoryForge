@@ -1,0 +1,194 @@
+{
+  "title": "Echoes of the Shattered Vow",
+  "idea": {
+    "protagonist": "A lone exorcist with forgotten powers",
+    "goal": "Uncover the truth behind a shattered world",
+    "genre": "Dark Fantasy",
+    "world_rule": "Magic exists, but every spell costs the caster a memory",
+    "ending_twist": "The real villain is the protagonist's future self"
+  },
+  "plot": {
+    "tone": 30,
+    "conflict": 80,
+    "romance": 30,
+    "action": 85,
+    "length": 60
+  },
+  "sampling": {
+    "temperature": 0.9,
+    "top_p": 0.95,
+    "top_k": 40,
+    "max_output_tokens": 4096,
+    "seed": null
+  },
+  "strategy": "cot",
+  "provider": "gemini",
+  "model": "gemini-3.5-flash-lite",
+  "created_at": "2026-11-24T08:00:56.818029+05:30",
+  "prompts": [
+    {
+      "step": "write",
+      "prompt": "STORY BRIEF\n- Protagonist: A lone exorcist with forgotten powers\n- Goal: Uncover the truth behind a shattered world\n- Genre: Dark Fantasy\n- World rule (must matter to the plot): Magic exists, but every spell costs the caster a memory\n- Ending twist (reveal near the climax, set it up earlier): The real villain is the protagonist's future self\n- Tone: dark and grim (30/100 toward light)\n- Conflict level: high (80/100)\n- Romance: none or minimal (30/100)\n- Action intensity: intense battles (85/100)\n- Length: 4 chapters of about 330 words each\n\nWork in explicit stages. First fill the \"plan\" field: (1) the world and how its rule works, (2) each character's motivation, (3) the arc across the six beats and where the twist is foreshadowed. Then write the story so it follows your plan.\n\nWrite the story. Return JSON with this schema:\n{\n  \"plan\": {\"world\": string, \"characters\": string, \"arc\": string},\n  \"title\": string,\n  \"logline\": string (2-3 sentence teaser),\n  \"characters\": [{\"name\": string, \"role\": \"protagonist\"|\"ally\"|\"rival\"|\"villain\"|\"mentor\"|\"other\",\n                  \"visual_description\": string (hair, eyes, outfit; reused for every image)}]  (3-5 items),\n  \"relationships\": [{\"source\": name, \"target\": name, \"label\": short string like \"ALLY\", \"CONFLICT\"}],\n  \"beats\": [{\"name\": one of \"Inciting Incident\",\"Call to Action\",\"Rising Conflict\",\"Midpoint Turn\",\"Climax\",\"Resolution\",\n             \"summary\": one sentence}]  (exactly 6, in that order),\n  \"chapters\": [{\"title\": short title WITHOUT \"Chapter\" or a number, \"text\": string}],\n  \"scenes\": [{\"caption\": short string, \"image_prompt\": visual description of one key moment, no dialogue}]  (exactly 4)\n}",
+      "latency_ms": 9844.0
+    }
+  ],
+  "intermediate_steps": {
+    "plan": {
+      "world": "A desolate dark fantasy realm where magic is fueled by human memories. Every spell cast permanently erases a piece of the caster's past, leaving a broken world populated by amnesiac survivors.",
+      "characters": "Kaelen: A lone exorcist seeking his identity. Lyra: A cynical scavenger who remembers the old world. The Ashen Fiend: The manifestation of Kaelen's corrupted future self.",
+      "arc": "Kaelen fights aberrant spirits while losing his memories to cast spells, discovering clues about the shattered world. Midpoint reveals the corruption stems from a familiar exorcist. Climax delivers the twist that Kaelen's future self is the mastermind. Resolution shows Kaelen accepting oblivion to stop himself."
+    }
+  },
+  "output": {
+    "title": "Echoes of the Shattered Vow",
+    "logline": "A lone exorcist must use his remaining memories to purge the corrupt remnants of a broken world. As he tracks the source of the devastation, he uncovers a horrifying truth waiting in his own future.",
+    "characters": [
+      {
+        "name": "Kaelen",
+        "role": "protagonist",
+        "visual_description": "Short silver-white hair, piercing amber eyes, wearing a worn leather trench coat lined with mystic runes."
+      },
+      {
+        "name": "Lyra",
+        "role": "ally",
+        "visual_description": "Messy dark brown hair tied in a braid, emerald green eyes, practical steel-plated scavenger armor."
+      },
+      {
+        "name": "The Ashen Fiend",
+        "role": "villain",
+        "visual_description": "Long flowing ash-gray hair, hollow glowing red eyes, draped in tattered priestly vestments made of shadows."
+      }
+    ],
+    "relationships": [
+      {
+        "source": "Kaelen",
+        "target": "Lyra",
+        "label": "ALLY"
+      },
+      {
+        "source": "Kaelen",
+        "target": "The Ashen Fiend",
+        "label": "CONFLICT"
+      }
+    ],
+    "beats": [
+      {
+        "name": "Inciting Incident",
+        "summary": "Kaelen battles a shadow beast and loses the memory of his childhood home to cast the sealing spell."
+      },
+      {
+        "name": "Call to Action",
+        "summary": "Lyra convinces Kaelen to follow a trail of shattered reality markers leading to the world's core."
+      },
+      {
+        "name": "Rising Conflict",
+        "summary": "Fierce battles against corrupted entities further erode Kaelen's recollection of his past life and purpose."
+      },
+      {
+        "name": "Midpoint Turn",
+        "summary": "An encounter with the Ashen Fiend reveals personal items belonging to Kaelen strewn across the ruin."
+      },
+      {
+        "name": "Climax",
+        "summary": "Kaelen faces the ultimate villain and realizes the Ashen Fiend is his own future self warped by magic."
+      },
+      {
+        "name": "Resolution",
+        "summary": "Kaelen casts his final spell, erasing his entire existence to rewrite the shattered world."
+      }
+    ],
+    "chapters": [
+      {
+        "title": "The Price of Iron",
+        "text": "The wind howled through the skeletal remains of the cathedral, carrying the stench of ash and old blood. Kaelen drew his blade, tracing glowing blue runes along the steel. A towering shadow beast lunged from the gloom, its claws dripping with void-essence. Kaelen muttered an incantation of binding. Pain flared behind his eyes as a vital piece of his mind shattered and drifted away into the ether; he had just forgotten the face of his mother. The beast froze, trapped in silver chains, before dissolving into harmless dust. Lyra stepped out from behind a fallen pillar, her expression grim. She tossed him a waterskin. 'You're running out of mind, exorcist,' she warned. Kaelen stared blankly at his own shaking hands, struggling to remember why he even bothered holding the sword. The world was broken, stripped of its history by the very magic men used to survive it. Every spell cast was a page torn from the book of one's soul. Yet, the compass in his pocket pointed northward, vibrating with a strange, magnetic resonance. It was the only clue left to a past he could no longer picture. Together, they pressed forward into the dark canyons of the ruined metropolis, hunting the anomaly at the heart of the world's collapse."
+      },
+      {
+        "title": "Trail of Embers",
+        "text": "Ruins bled purple light under a dead, starless sky. The journey north was a brutal gauntlet of feral wraiths and crumbling architecture. Lyra checked her crossbow bolts as Kaelen sat in silence, staring into a campfire that refused to warm his freezing bones. 'What do you remember?' Lyra asked quietly. Kaelen closed his eyes, searching the empty corridors of his mind. 'Nothing before the age of twenty,' he rasped. 'Just blood, runes, and a promise.' They walked through the dead streets by dawn, ambushed by a swarm of razor-winged gargoyles. Kaelen moved with lethal precision, his sword flashing like lightning. To save Lyra from a blindside strike, he whispered a burst-ward incantation. Another heavy toll was exacted. The memory of his first love vanished completely, leaving behind an aching hollow chest. Lyra caught him as he staggered, bleeding magic from his fingertips. 'Stop using the high-tier chants!' she shouted over the screeching monsters. Kaelen shook his head, his amber eyes reflecting the cold glare of the ruins. 'If I don't burn the past, the present kills us.' Deep within the plaza, they found the anomaly: a massive tear in reality pulsing with dark energy. And beside it stood a cloaked figure leaving footprints carved with Kaelen's exact signature rune."
+      },
+      {
+        "title": "Mirror of Ash",
+        "text": "The anomaly hummed with a terrifying frequency, warping gravity and light. Kaelen and Lyra crept through the shattered plaza, ducking behind fractured monoliths. The cloaked figure turned, casting back its hood to reveal a face identical to Kaelen's, though warped by necrotic magic and glowing red eyes. The Ashen Fiend smiled, a cruel and hollow expression. 'Welcome, younger me,' the entity rasped, its voice echoing in their skulls. Kaelen gripped his hilt, a sudden spike of cognitive dissonance tearing through his thoughts. The Ashen Fiend mocked him, detailing secrets of Kaelen's forgotten past that only he should know. 'You think you are saving this world?' the Fiend laughed, stepping forward as dark energy flared around him. 'Every spell you cast feeds the rift. Every memory you sacrifice builds my throne.' Lyra raised her crossbow, but a wave of psychic pressure knocked her breathless. Kaelen lunged forward, blade singing in the dark. Steel met shadow in a violent clash of sparks and kinetic force. The Fiend parried effortlessly, taunting Kaelen's fading humanity. Kaelen realized the horrifying truth: the destroyer of the world was not an outside invader, but the ultimate destination of his own desperate journey."
+      },
+      {
+        "title": "The Final Sacrifice",
+        "text": "Blood trickled down Kaelen's brow as he traded blow for brutal blow with his future self. The Ashen Fiend laughed, channeling the accumulated memories of Kaelen's entire lost life into a devastating blast of void-fire. Lyra fired a barrage of explosive bolts, creating a momentary opening. Kaelen knew what he had to do. There was no victory left to win through survival; the magic required a final, ultimate payment. He began to chant the primordial undoing spell—an incantation that demanded not just memories, but the caster's entire existence. Golden runes flared across his skin, burning brighter than the dying sun. The Ashen Fiend shrieked as the spell chained them both together, a paradox of cause and effect collapsing in on itself. 'You are erasing us!' the Fiend screamed in terror as his form began to fray. Kaelen smiled softly, finally remembering everything—why the world broke, who he loved, and the vow he made to heal it. With a final surge of will, Kaelen completed the verse. The rift imploded, sealing the void and restoring the fabric of reality at the cost of his own soul. Lyra stood alone in the quiet dawn, watching the golden embers fade into a peaceful, unbroken horizon."
+      }
+    ],
+    "scenes": [
+      {
+        "caption": "Kaelen fights a shadow beast in the ruins",
+        "image_prompt": "A lone silver-haired exorcist in a dark leather trench coat battles a towering shadow beast inside a ruined cathedral, glowing blue runes tracing his glowing sword."
+      },
+      {
+        "caption": "Ambushed by gargoyles in the dead city",
+        "image_prompt": "An intense action shot of the silver-haired protagonist and a female scavenger fighting off razor-winged gargoyles amidst falling debris under a purple sky."
+      },
+      {
+        "caption": "Confronting the Ashen Fiend at the rift",
+        "image_prompt": "The protagonist staring face-to-face with his dark, glowing-eyed future self wearing tattered priestly vestments before a massive tear in reality."
+      },
+      {
+        "caption": "The final sealing spell consumes the protagonist",
+        "image_prompt": "The silver-haired exorcist engulfed in blinding golden runes as a void rift implodes into brilliant light, leaving a lone female survivor watching from afar."
+      }
+    ]
+  },
+  "metrics": {
+    "distinct_1": 0.53,
+    "distinct_2": 0.93,
+    "brief_coverage": 0.579,
+    "brief_terms_found": [
+      "exorcist",
+      "forgotten",
+      "future",
+      "lone",
+      "magic",
+      "memory",
+      "self",
+      "shattered",
+      "spell",
+      "truth",
+      "world"
+    ],
+    "brief_terms_missing": [
+      "caster",
+      "costs",
+      "exists",
+      "powers",
+      "protagonist's",
+      "real",
+      "uncover",
+      "villain"
+    ],
+    "character_presence": 1.0,
+    "word_count": 833,
+    "length_ratio": 0.63,
+    "structure_score": 1.0,
+    "llm_calls": 1,
+    "latency_ms": 9844
+  },
+  "human_rating": null,
+  "scenes": [
+    {
+      "index": 1,
+      "caption": "Kaelen fights a shadow beast in the ruins",
+      "image_prompt": "A lone silver-haired exorcist in a dark leather trench coat battles a towering shadow beast inside a ruined cathedral, glowing blue runes tracing his glowing sword.. Characters: Kaelen: Short silver-white hair, piercing amber eyes, wearing a worn leather trench coat lined with mystic runes.; Lyra: Messy dark brown hair tied in a braid, emerald green eyes, practical steel-plated scavenger armor.; The Ashen Fiend: Long flowing ash-gray hair, hollow glowing red eyes, draped in tattered priestly vestments made of shadows.. Style: polished anime fantasy illustration, wide cinematic scene, characters shown at medium distance within a detailed environment, soft dramatic lighting, moody twilight palette with violet highlights, painterly, beautiful. No close-up faces, no gore, no text, no captions, no watermark."
+    },
+    {
+      "index": 2,
+      "caption": "Ambushed by gargoyles in the dead city",
+      "image_prompt": "An intense action shot of the silver-haired protagonist and a female scavenger fighting off razor-winged gargoyles amidst falling debris under a purple sky.. Characters: Kaelen: Short silver-white hair, piercing amber eyes, wearing a worn leather trench coat lined with mystic runes.; Lyra: Messy dark brown hair tied in a braid, emerald green eyes, practical steel-plated scavenger armor.; The Ashen Fiend: Long flowing ash-gray hair, hollow glowing red eyes, draped in tattered priestly vestments made of shadows.. Style: polished anime fantasy illustration, wide cinematic scene, characters shown at medium distance within a detailed environment, soft dramatic lighting, moody twilight palette with violet highlights, painterly, beautiful. No close-up faces, no gore, no text, no captions, no watermark."
+    },
+    {
+      "index": 3,
+      "caption": "Confronting the Ashen Fiend at the rift",
+      "image_prompt": "The protagonist staring face-to-face with his dark, glowing-eyed future self wearing tattered priestly vestments before a massive tear in reality.. Characters: Kaelen: Short silver-white hair, piercing amber eyes, wearing a worn leather trench coat lined with mystic runes.; Lyra: Messy dark brown hair tied in a braid, emerald green eyes, practical steel-plated scavenger armor.; The Ashen Fiend: Long flowing ash-gray hair, hollow glowing red eyes, draped in tattered priestly vestments made of shadows.. Style: polished anime fantasy illustration, wide cinematic scene, characters shown at medium distance within a detailed environment, soft dramatic lighting, moody twilight palette with violet highlights, painterly, beautiful. No close-up faces, no gore, no text, no captions, no watermark."
+    },
+    {
+      "index": 4,
+      "caption": "The final sealing spell consumes the protagonist",
+      "image_prompt": "The silver-haired exorcist engulfed in blinding golden runes as a void rift implodes into brilliant light, leaving a lone female survivor watching from afar.. Characters: Kaelen: Short silver-white hair, piercing amber eyes, wearing a worn leather trench coat lined with mystic runes.; Lyra: Messy dark brown hair tied in a braid, emerald green eyes, practical steel-plated scavenger armor.; The Ashen Fiend: Long flowing ash-gray hair, hollow glowing red eyes, draped in tattered priestly vestments made of shadows.. Style: polished anime fantasy illustration, wide cinematic scene, characters shown at medium distance within a detailed environment, soft dramatic lighting, moody twilight palette with violet highlights, painterly, beautiful. No close-up faces, no gore, no text, no captions, no watermark."
+    }
+  ]
+}

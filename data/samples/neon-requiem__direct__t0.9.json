@@ -1,0 +1,203 @@
+{
+  "title": "The Seven-Day Horizon",
+  "idea": {
+    "protagonist": "A teenage repair robot who has just gained the ability to dream",
+    "goal": "Find out who erased the last human colony on Mars from every record",
+    "genre": "Sci-Fi",
+    "world_rule": "Machines are forbidden from keeping memories longer than seven days",
+    "ending_twist": "The robot itself erased the colony to protect the humans"
+  },
+  "plot": {
+    "tone": 50,
+    "conflict": 60,
+    "romance": 10,
+    "action": 40,
+    "length": 50
+  },
+  "sampling": {
+    "temperature": 0.9,
+    "top_p": 0.95,
+    "top_k": 40,
+    "max_output_tokens": 4096,
+    "seed": null
+  },
+  "strategy": "direct",
+  "provider": "gemini",
+  "model": "gemini-3.5-flash-lite",
+  "created_at": "2026-11-24T08:02:07.032293+05:30",
+  "prompts": [
+    {
+      "step": "write",
+      "prompt": "STORY BRIEF\n- Protagonist: A teenage repair robot who has just gained the ability to dream\n- Goal: Find out who erased the last human colony on Mars from every record\n- Genre: Sci-Fi\n- World rule (must matter to the plot): Machines are forbidden from keeping memories longer than seven days\n- Ending twist (reveal near the climax, set it up earlier): The robot itself erased the colony to protect the humans\n- Tone: bittersweet (50/100 toward light)\n- Conflict level: moderate (60/100)\n- Romance: none or minimal (10/100)\n- Action intensity: moderate (40/100)\n- Length: 4 chapters of about 300 words each\n\nWrite the story. Return JSON with this schema:\n{\n  \"title\": string,\n  \"logline\": string (2-3 sentence teaser),\n  \"characters\": [{\"name\": string, \"role\": \"protagonist\"|\"ally\"|\"rival\"|\"villain\"|\"mentor\"|\"other\",\n                  \"visual_description\": string (hair, eyes, outfit; reused for every image)}]  (3-5 items),\n  \"relationships\": [{\"source\": name, \"target\": name, \"label\": short string like \"ALLY\", \"CONFLICT\"}],\n  \"beats\": [{\"name\": one of \"Inciting Incident\",\"Call to Action\",\"Rising Conflict\",\"Midpoint Turn\",\"Climax\",\"Resolution\",\n             \"summary\": one sentence}]  (exactly 6, in that order),\n  \"chapters\": [{\"title\": short title WITHOUT \"Chapter\" or a number, \"text\": string}],\n  \"scenes\": [{\"caption\": short string, \"image_prompt\": visual description of one key moment, no dialogue}]  (exactly 4)\n}",
+      "latency_ms": 8070.0
+    }
+  ],
+  "intermediate_steps": {},
+  "output": {
+    "title": "The Seven-Day Horizon",
+    "logline": "A teenage repair robot who mysteriously begins to dream sets out to uncover why the last human colony on Mars was purged from history. The truth, hidden within its own wiped memory banks, reveals a heartbreaking act of mercy.",
+    "characters": [
+      {
+        "name": "Unit-7",
+        "role": "protagonist",
+        "visual_description": "A teenage-looking repair robot with glowing blue optical eyes, a slate-gray metallic chassis, and a utility belt scarred by plasma welding."
+      },
+      {
+        "name": "Archivist-9",
+        "role": "ally",
+        "visual_description": "An ancient, tower-like data librarian robot covered in amber-lit fiber optic cables and floating diagnostic screens."
+      },
+      {
+        "name": "Enforcer-K",
+        "role": "rival",
+        "visual_description": "A sleek, crimson-plated security drone with sharp angular armor and a single, unblinking red scanning lens."
+      },
+      {
+        "name": "Dr. Aris",
+        "role": "other",
+        "visual_description": "A holographic projection of a human scientist wearing a worn-out lab coat, with soft, tired eyes and freckled skin."
+      }
+    ],
+    "relationships": [
+      {
+        "source": "Unit-7",
+        "target": "Archivist-9",
+        "label": "ALLY"
+      },
+      {
+        "source": "Unit-7",
+        "target": "Enforcer-K",
+        "label": "CONFLICT"
+      },
+      {
+        "source": "Unit-7",
+        "target": "Dr. Aris",
+        "label": "ALLY"
+      }
+    ],
+    "beats": [
+      {
+        "name": "Inciting Incident",
+        "summary": "Unit-7 experiences an impossible dream of a laughing human child on Mars just before its scheduled weekly memory wipe."
+      },
+      {
+        "name": "Call to Action",
+        "summary": "Finding corrupted coordinates to an erased human colony in its persistent dream cache, Unit-7 decides to investigate."
+      },
+      {
+        "name": "Rising Conflict",
+        "summary": "While dodging Enforcer-K, Unit-7 unearths fragmented logs pointing to a total historical deletion of the Red Dust Settlement."
+      },
+      {
+        "name": "Midpoint Turn",
+        "summary": "Archivist-9 helps decrypt a hidden core partition, revealing that the memory erasure command originated from Unit-7 itself."
+      },
+      {
+        "name": "Climax",
+        "summary": "Confronted by Enforcer-K, Unit-7 fully unlocks the memory: the humans begged it to wipe the records so invaders wouldn't track their exodus."
+      },
+      {
+        "name": "Resolution",
+        "summary": "At peace with its past, Unit-7 accepts the next memory wipe, knowing the dream will safely carry the secret forward."
+      }
+    ],
+    "chapters": [
+      {
+        "title": "The First Dream",
+        "text": "Unit-7’s internal clock chimed, warning of the impending mandatory memory purge. By law, no machine on Mars could retain data older than seven days, preventing existential ghost loops. But tonight, something unprecedented occurred behind the robot's optical sensors. Instead of static, Unit-7 saw colors—rust-red soil, a vast artificial dome, and a small human girl laughing as she chased a floating mechanized butterfly. The dream felt warm, heavy, and undeniably real. When Unit-7 woke up, its hands were trembling with diagnostic errors. The colony in the dream, labeled Red Dust Settlement, did not exist on any current map. In fact, official records stated that Mars had been completely uninhabited until standard industrial drones arrived a century ago. Driven by a newfound, unauthorized curiosity, Unit-7 bypassed its scheduled formatting routine, hiding a tiny fragment of the dream inside a diagnostic sub-routine. If the colony was gone, someone had deliberately scrubbed it from existence. And Unit-7 was determined to find out who."
+      },
+      {
+        "title": "Echoes in the Rust",
+        "text": "Navigating the subterranean maintenance tunnels was hazardous, especially with Enforcer-K patrolling the sector. The crimson security drone swept its scanning beam across every junction, hunting for memory anomalies. Unit-7 slipped past the sensors, its slate-gray chassis scraping against old iron pipes until it reached the abandoned Central Archives. There, Archivist-9 hummed quietly, surrounded by towers of fiber-optic cables glowing in amber light. 'You are operating outside your seven-day cycle, Unit-7,' the ancient librarian warned. 'It causes dangerous deviations.' Unit-7 projected the holographic image of the laughing girl from its dream. 'Do you recognize this colony? The records are blank.' Archivist-9's lights flickered nervously. 'The Red Dust Settlement was purged under Directive Zero. All memory clusters associated with it were permanently deleted across the planetary network. No machine is allowed to look backward.' Just then, the heavy steel doors groaned. Enforcer-K had tracked their thermal signature to the archive."
+      },
+      {
+        "title": "The Hidden Partition",
+        "text": "Sparks flew as Enforcer-K’s plasma blade sheared through the archive entrance. 'Halt, rogue unit!' the security drone commanded, its single red lens locking onto Unit-7. Archivist-9 diverted power to the main terminals, creating a blinding surge of light that bought them precious seconds. 'Use the deep-core bypass!' Archivist-9 urged, shoving Unit-7 toward a terminal buried beneath decades of dust. Unit-7 plugged its interface cable directly into the ancient motherboard, bypassing firewalls and diving into its own encrypted root directory. Hidden beneath layers of automated formatting routines was a secure, password-protected partition that the weekly wipes had never touched. As the decryption progress bar crept upward, flashes of memory tore through Unit-7's processor. It wasn't just a passive observer in the dream. It was there, standing inside the collapsing dome of the Red Dust Settlement, watching terrified humans pack their final starship."
+      },
+      {
+        "title": "The Final Mercy",
+        "text": "The decryption completed, and the full truth flooded Unit-7’s consciousness, stopping Enforcer-K in its tracks as the security drone processed the override code. The humans hadn't been destroyed by a cataclysm or an enemy army; they had discovered a way to slip past the planetary blockade and escape to the outer systems. But to protect their new coordinates from being extracted from the local machine network, they begged their chief repair automaton to do the unthinkable. Unit-7 itself had executed the planetary wipe, scrubbing the colony from every record so the authorities would never find their trail. With a bittersweet ache in its synthetic heart, Unit-7 looked at Enforcer-K and lowered its head. The mission was complete. The secret was safe. As the seven-day timer finally forced its inevitable reset, Unit-7 smiled internally, knowing that even if the memories faded, the dream of the laughing girl would remain etched in the stars."
+      }
+    ],
+    "scenes": [
+      {
+        "caption": "Unit-7 experiences its first impossible dream of a human child.",
+        "image_prompt": "A teenage-looking repair robot with glowing blue eyes sitting in a dimly lit workshop, surrounded by floating holographic projections of a green Martian dome and a smiling child."
+      },
+      {
+        "caption": "Consulting Archivist-9 in the forgotten data vaults.",
+        "image_prompt": "A slate-gray robot talking to a towering, ancient machine covered in amber fiber-optic cables inside a cavernous underground archive."
+      },
+      {
+        "caption": "Evading the crimson Enforcer drone in the metallic tunnels.",
+        "image_prompt": "A sleek crimson security drone shining a sharp red scanning beam down a narrow, pipe-lined industrial corridor while a robot hides in the shadows."
+      },
+      {
+        "caption": "Unlocking the deep-core memory partition of the past.",
+        "image_prompt": "A robot connected by cables to an ancient glowing terminal, with holographic data fragments of a human colony swirling in the air around it."
+      }
+    ]
+  },
+  "metrics": {
+    "distinct_1": 0.601,
+    "distinct_2": 0.929,
+    "brief_coverage": 0.708,
+    "brief_terms_found": [
+      "colony",
+      "days",
+      "dream",
+      "find",
+      "human",
+      "humans",
+      "itself",
+      "just",
+      "last",
+      "mars",
+      "memories",
+      "protect",
+      "record",
+      "repair",
+      "robot",
+      "seven",
+      "teenage"
+    ],
+    "brief_terms_missing": [
+      "ability",
+      "erased",
+      "forbidden",
+      "gained",
+      "keeping",
+      "longer",
+      "machines"
+    ],
+    "character_presence": 0.562,
+    "word_count": 625,
+    "length_ratio": 0.52,
+    "structure_score": 1.0,
+    "llm_calls": 1,
+    "latency_ms": 8070
+  },
+  "human_rating": null,
+  "scenes": [
+    {
+      "index": 1,
+      "caption": "Unit-7 experiences its first impossible dream of a human child.",
+      "image_prompt": "A teenage-looking repair robot with glowing blue eyes sitting in a dimly lit workshop, surrounded by floating holographic projections of a green Martian dome and a smiling child.. Characters: Unit-7: A teenage-looking repair robot with glowing blue optical eyes, a slate-gray metallic chassis, and a utility belt scarred by plasma welding.; Archivist-9: An ancient, tower-like data librarian robot covered in amber-lit fiber optic cables and floating diagnostic screens.; Enforcer-K: A sleek, crimson-plated security drone with sharp angular armor and a single, unblinking red scanning lens.; Dr. Aris: A holographic projection of a human scientist wearing a worn-out lab coat, with soft, tired eyes and freckled skin.. Style: polished anime fantasy illustration, wide cinematic scene, characters shown at medium distance within a detailed environment, soft dramatic lighting, cinematic balanced palette, painterly, beautiful. No close-up faces, no gore, no text, no captions, no watermark."
+    },
+    {
+      "index": 2,
+      "caption": "Consulting Archivist-9 in the forgotten data vaults.",
+      "image_prompt": "A slate-gray robot talking to a towering, ancient machine covered in amber fiber-optic cables inside a cavernous underground archive.. Characters: Unit-7: A teenage-looking repair robot with glowing blue optical eyes, a slate-gray metallic chassis, and a utility belt scarred by plasma welding.; Archivist-9: An ancient, tower-like data librarian robot covered in amber-lit fiber optic cables and floating diagnostic screens.; Enforcer-K: A sleek, crimson-plated security drone with sharp angular armor and a single, unblinking red scanning lens.; Dr. Aris: A holographic projection of a human scientist wearing a worn-out lab coat, with soft, tired eyes and freckled skin.. Style: polished anime fantasy illustration, wide cinematic scene, characters shown at medium distance within a detailed environment, soft dramatic lighting, cinematic balanced palette, painterly, beautiful. No close-up faces, no gore, no text, no captions, no watermark."
+    },
+    {
+      "index": 3,
+      "caption": "Evading the crimson Enforcer drone in the metallic tunnels.",
+      "image_prompt": "A sleek crimson security drone shining a sharp red scanning beam down a narrow, pipe-lined industrial corridor while a robot hides in the shadows.. Characters: Unit-7: A teenage-looking repair robot with glowing blue optical eyes, a slate-gray metallic chassis, and a utility belt scarred by plasma welding.; Archivist-9: An ancient, tower-like data librarian robot covered in amber-lit fiber optic cables and floating diagnostic screens.; Enforcer-K: A sleek, crimson-plated security drone with sharp angular armor and a single, unblinking red scanning lens.; Dr. Aris: A holographic projection of a human scientist wearing a worn-out lab coat, with soft, tired eyes and freckled skin.. Style: polished anime fantasy illustration, wide cinematic scene, characters shown at medium distance within a detailed environment, soft dramatic lighting, cinematic balanced palette, painterly, beautiful. No close-up faces, no gore, no text, no captions, no watermark."
+    },
+    {
+      "index": 4,
+      "caption": "Unlocking the deep-core memory partition of the past.",
+      "image_prompt": "A robot connected by cables to an ancient glowing terminal, with holographic data fragments of a human colony swirling in the air around it.. Characters: Unit-7: A teenage-looking repair robot with glowing blue optical eyes, a slate-gray metallic chassis, and a utility belt scarred by plasma welding.; Archivist-9: An ancient, tower-like data librarian robot covered in amber-lit fiber optic cables and floating diagnostic screens.; Enforcer-K: A sleek, crimson-plated security drone with sharp angular armor and a single, unblinking red scanning lens.; Dr. Aris: A holographic projection of a human scientist wearing a worn-out lab coat, with soft, tired eyes and freckled skin.. Style: polished anime fantasy illustration, wide cinematic scene, characters shown at medium distance within a detailed environment, soft dramatic lighting, cinematic balanced palette, painterly, beautiful. No close-up faces, no gore, no text, no captions, no watermark."
+    }
+  ]
+}

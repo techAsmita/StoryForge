@@ -1,0 +1,218 @@
+{
+  "title": "Ashes of Tomorrow",
+  "idea": {
+    "protagonist": "A lone exorcist with forgotten powers",
+    "goal": "Uncover the truth behind a shattered world",
+    "genre": "Dark Fantasy",
+    "world_rule": "Magic exists, but every spell costs the caster a memory",
+    "ending_twist": "The real villain is the protagonist's future self"
+  },
+  "plot": {
+    "tone": 30,
+    "conflict": 80,
+    "romance": 30,
+    "action": 85,
+    "length": 60
+  },
+  "sampling": {
+    "temperature": 0.9,
+    "top_p": 0.95,
+    "top_k": 40,
+    "max_output_tokens": 4096,
+    "seed": null
+  },
+  "strategy": "interview",
+  "provider": "gemini",
+  "model": "gemini-3.5-flash-lite",
+  "created_at": "2026-11-24T08:00:35.959267+05:30",
+  "prompts": [
+    {
+      "step": "interview",
+      "prompt": "STORY BRIEF\n- Protagonist: A lone exorcist with forgotten powers\n- Goal: Uncover the truth behind a shattered world\n- Genre: Dark Fantasy\n- World rule (must matter to the plot): Magic exists, but every spell costs the caster a memory\n- Ending twist (reveal near the climax, set it up earlier): The real villain is the protagonist's future self\n- Tone: dark and grim (30/100 toward light)\n- Conflict level: high (80/100)\n- Romance: none or minimal (30/100)\n- Action intensity: intense battles (85/100)\n- Length: 4 chapters of about 330 words each\n\nBefore writing, act as an editor interviewing the author. Ask the 5 most important questions needed to write this story well (motivation, stakes, the world rule's cost, the rival, how the twist is foreshadowed), then answer each one yourself, consistent with the brief.\nReturn JSON: {\"questions\": [{\"q\": string, \"a\": string}]}",
+      "latency_ms": 2828.1
+    },
+    {
+      "step": "write",
+      "prompt": "STORY BRIEF\n- Protagonist: A lone exorcist with forgotten powers\n- Goal: Uncover the truth behind a shattered world\n- Genre: Dark Fantasy\n- World rule (must matter to the plot): Magic exists, but every spell costs the caster a memory\n- Ending twist (reveal near the climax, set it up earlier): The real villain is the protagonist's future self\n- Tone: dark and grim (30/100 toward light)\n- Conflict level: high (80/100)\n- Romance: none or minimal (30/100)\n- Action intensity: intense battles (85/100)\n- Length: 4 chapters of about 330 words each\n\nEDITOR INTERVIEW (use these answers):\nQ: What is the protagonist's primary motivation for seeking the truth about the shattered world, especially when it threatens his remaining sanity?\nA: Kain is driven by the haunting fragments of a face he cannot name and a promise he vaguely remembers making. He believes recovering the world's history will restore the gaping void in his own identity.\nQ: What are the high stakes if Kain fails in his quest or loses all his memories before reaching the end?\nA: If Kain casts too many spells and exhausts his memory reservoir, his mind will completely collapse into an empty vessel, effectively erasing him from existence while leaving the world permanently trapped in its shattered, monstrous state.\nQ: How does the memory-cost rule specifically impact his journey and create immediate tension in the plot?\nA: Every time Kain uses an exorcism spell to survive a lethal demonic attack, he permanently forgets crucial tactical information, past alliances, and vital clues about his destination, forcing him to rely on written journals that he might not understand tomorrow.\nQ: Who acts as the primary antagonist or opposing force tracking Kain through the dark fantasy landscape?\nA: A merciless Inquisitor named Vane, who believes the shattered world is a divine punishment and seeks to hunt down Kain, viewing his quest for truth as a blasphemous attempt to undo sacred cosmic law.\nQ: How is the twist—that the villain is Kain's future self—subtly foreshadowed throughout the chapters?\nA: The shadowy entity orchestrating the world's destruction uses Kain's exact forgotten fighting styles, leaves cryptic journal entries written in Kain's own handwriting, and possesses the very same missing memories Kain is desperately trying to reclaim.\n\nWrite the story. Return JSON with this schema:\n{\n  \"title\": string,\n  \"logline\": string (2-3 sentence teaser),\n  \"characters\": [{\"name\": string, \"role\": \"protagonist\"|\"ally\"|\"rival\"|\"villain\"|\"mentor\"|\"other\",\n                  \"visual_description\": string (hair, eyes, outfit; reused for every image)}]  (3-5 items),\n  \"relationships\": [{\"source\": name, \"target\": name, \"label\": short string like \"ALLY\", \"CONFLICT\"}],\n  \"beats\": [{\"name\": one of \"Inciting Incident\",\"Call to Action\",\"Rising Conflict\",\"Midpoint Turn\",\"Climax\",\"Resolution\",\n             \"summary\": one sentence}]  (exactly 6, in that order),\n  \"chapters\": [{\"title\": short title WITHOUT \"Chapter\" or a number, \"text\": string}],\n  \"scenes\": [{\"caption\": short string, \"image_prompt\": visual description of one key moment, no dialogue}]  (exactly 4)\n}",
+      "latency_ms": 9262.5
+    }
+  ],
+  "intermediate_steps": {
+    "interview": {
+      "questions": [
+        {
+          "q": "What is the protagonist's primary motivation for seeking the truth about the shattered world, especially when it threatens his remaining sanity?",
+          "a": "Kain is driven by the haunting fragments of a face he cannot name and a promise he vaguely remembers making. He believes recovering the world's history will restore the gaping void in his own identity."
+        },
+        {
+          "q": "What are the high stakes if Kain fails in his quest or loses all his memories before reaching the end?",
+          "a": "If Kain casts too many spells and exhausts his memory reservoir, his mind will completely collapse into an empty vessel, effectively erasing him from existence while leaving the world permanently trapped in its shattered, monstrous state."
+        },
+        {
+          "q": "How does the memory-cost rule specifically impact his journey and create immediate tension in the plot?",
+          "a": "Every time Kain uses an exorcism spell to survive a lethal demonic attack, he permanently forgets crucial tactical information, past alliances, and vital clues about his destination, forcing him to rely on written journals that he might not understand tomorrow."
+        },
+        {
+          "q": "Who acts as the primary antagonist or opposing force tracking Kain through the dark fantasy landscape?",
+          "a": "A merciless Inquisitor named Vane, who believes the shattered world is a divine punishment and seeks to hunt down Kain, viewing his quest for truth as a blasphemous attempt to undo sacred cosmic law."
+        },
+        {
+          "q": "How is the twist—that the villain is Kain's future self—subtly foreshadowed throughout the chapters?",
+          "a": "The shadowy entity orchestrating the world's destruction uses Kain's exact forgotten fighting styles, leaves cryptic journal entries written in Kain's own handwriting, and possesses the very same missing memories Kain is desperately trying to reclaim."
+        }
+      ]
+    }
+  },
+  "output": {
+    "title": "Ashes of Tomorrow",
+    "logline": "A lone exorcist trades his own memories to cast spells in a ruined dark fantasy world, unaware that the shadow hunting him is his own future self. To save reality, he must uncover a past he is actively erasing.",
+    "characters": [
+      {
+        "name": "Kain",
+        "role": "protagonist",
+        "visual_description": "White hair, cold grey eyes, scarred face, wearing a tattered dark trench coat lined with wards."
+      },
+      {
+        "name": "Vane",
+        "role": "rival",
+        "visual_description": "Short black hair, piercing amber eyes, wearing heavy silver inquisitor armor and wielding a glowing holy blade."
+      },
+      {
+        "name": "The Eclipse Entity",
+        "role": "villain",
+        "visual_description": "Silver hair, hollow glowing eyes, cloaked in shifting shadows wearing a corrupted version of Kain's trench coat."
+      }
+    ],
+    "relationships": [
+      {
+        "source": "Kain",
+        "target": "Vane",
+        "label": "CONFLICT"
+      },
+      {
+        "source": "Kain",
+        "target": "The Eclipse Entity",
+        "label": "CONFLICT"
+      }
+    ],
+    "beats": [
+      {
+        "name": "Inciting Incident",
+        "summary": "Kain fights off a swarm of demonic ghouls in the ruined wastes, sacrificing his childhood memories to cast a devastating banishment spell."
+      },
+      {
+        "name": "Call to Action",
+        "summary": "Reading his own blood-stained journal, Kain discovers cryptic clues pointing toward the center of the shattered world."
+      },
+      {
+        "name": "Rising Conflict",
+        "summary": "The relentless Inquisitor Vane corners Kain among the floating debris of a dead city, forcing another costly spell."
+      },
+      {
+        "name": "Midpoint Turn",
+        "summary": "Kain encounters shadow remnants that use his exact combat style, hinting at a terrifying cyclical trap."
+      },
+      {
+        "name": "Climax",
+        "summary": "Kain confronts the master of the void, only to realize the shadowy antagonist is his own corrupted future self."
+      },
+      {
+        "name": "Resolution",
+        "summary": "With his mind nearly blank, Kain makes a final devastating sacrifice to break the time loop and save what remains of reality."
+      }
+    ],
+    "chapters": [
+      {
+        "title": "The Price of Light",
+        "text": "The wind howled across the floating debris of what used to be a bustling empire. Kain clutched his leather-bound journal, his breath pluming in the ash-choked air. His mind was a battlefield of missing years, a cavernous void where faces and names used to reside. Driven by a haunting fragment of a smile he could no longer picture, he pressed forward. Suddenly, the shadows curled into jagged claws. Low, guttural growls echoed from the ruins as demonic fiends lunged from the gloom. Kain raised his hand, tracing a glowing rune in the air. The incantation tasted like copper on his tongue. With a blinding flash of silver fire, the monsters vaporized into black dust. But the victory demanded its toll. Kain gasped, clutching his head as a sharp pain pierced his brain. He dropped to his knees, frantically opening his journal to read the ink-stained entries. 'My name is Kain. I am an exorcist.' He had to write it down, because the spell had just consumed the memory of his own mother's face. The shattered world groaned beneath his boots, a bleak monument to a forgotten cataclysm. He stood up, his grey eyes hardened by fresh ignorance, knowing every spell he cast brought him closer to complete erasure. Yet stopping was not an option. Somewhere ahead lay the truth, guarded by nightmares and the cold, unyielding pursuit of Inquisitor Vane, a zealot who believed Kain's quest was a sin against the divine ruin."
+      },
+      {
+        "title": "Ink and Ash",
+        "text": "Nightmares bled into the waking world as Kain navigated the vertical canyons of the shattered metropolis. Vane's holy sigils glowed faintly on nearby walls, warning of the inquisitor's recent passage. Vane viewed the fractured earth as sacred holy punishment, hunting Kain relentlessly to preserve the cosmic status quo. A sudden crash shattered the silence. Heavy silver armor clanked against stone, and Vane stepped out from the shadows, his glowing blade humming with deadly intent. 'Your blasphemous search ends here, Kain,' Vane declared, his amber eyes narrowing. Kain didn't answer with words; he drew a jagged exorcism blade. Steel clashed against divine light, sending sparks cascading into the endless abyss below. Realizing he was outmatched in physical combat, Kain gripped his amulet. He needed power. He muttered an ancient rite, unleashing a kinetic shockwave that threw Vane backward. The magic tore through Kain's consciousness, ripping away the memory of his first sword master, his training days, and the very reason he picked up a blade. Stumbling from the mental blow, Kain fled into the fog, leaving a furious Vane behind. panting heavily, Kain opened his journal by moonlight. His own handwriting stared back at him, offering instructions he could barely comprehend. Among the frantically scrawled tactical notes, he noticed something deeply unsettling. A margin note written in his own hand predicted Vane's exact ambush, detailing maneuvers he had never shared with anyone. A cold dread settled in his chest, far colder than the dark fantasy wasteland."
+      },
+      {
+        "title": "Echoes of the Self",
+        "text": "Deep within the core of the fractured world, gravity twisted unnervingly. Floating islands of gothic architecture orbited a central tear in the sky. Kain's steps were sluggish, his mind teetering on the absolute edge of collapse. He had forgotten his childhood, his allies, and the taste of wine. He was merely a walking shell fueled by ink and sheer stubborn defiance. Without warning, a dark figure dropped from an overhead ruin, landing with lethal grace. The entity wore a tattered coat identical to Kain's, its white hair whipping in the chaotic gale. It raised a hand, and without uttering a single syllable, executed Kain's signature exorcism technique with terrifying precision. A black flame surged forward, narrowly grazing Kain's shoulder and searing the stone to ash. Kain dodged, staring in horror. The entity moved like a mirror image, predicting his stances before he even assumed them. Every time Kain cast a defensive ward, the shadowy figure countered it effortlessly, utilizing tactical knowledge that only Kain himself possessed. As they clashed blade to blade in the swirling void, the entity lowered its hood. Staring back into the cold grey eyes was a visage that mirrored his own, albeit twisted by centuries of despair and corrupted cosmic power. The realization hit Kain like a physical blow. The monster orchestrating the world's eternal ruin was not an external demon, but the ultimate destination of his own journey—his future self, driven mad by the total loss of memory."
+      },
+      {
+        "title": "The Final Incantation",
+        "text": "The future Kain smiled a bitter, hollow expression, his voice a rasping echo of regret. 'Every spell you cast, past self, brings you closer to becoming me,' the entity whispered, stepping forward with a blade drawn. 'The world remains shattered because we broke it trying to fix it.' Kain gripped his bleeding head as fragmented visions of the future flashed violently behind his eyes—centuries of endless wandering, of forgetting everything until nothing remained of his humanity. The stakes were absolute: if he yielded, the time loop closed permanently, sealing the universe in eternal torment. If he fought back with magic, he would erase his remaining sanity and birth the very monster standing before him. There was only one way to break the curse. Kain opened his journal one last time. He did not read the past; he tore out the pages, feeding his remaining identity into the sacred fire of his core. He gathered every ounce of his remaining magical reservoir, channeling not just his memories, but the very concept of his existence into a singular, cataclysmic banishment rite. A blinding column of pure, unadulterated light erupted from the core of the shattered world. The future self shrieked as the paradox unraveled, dissolving into brilliant motes of golden light. As the darkness finally receded and the floating continents began to stabilize, Kain stood alone in the quiet dawn. His mind was entirely blank, his journal blank paper. He had saved the world, but as he looked out over the healing horizon, he could not even remember his own name."
+      }
+    ],
+    "scenes": [
+      {
+        "caption": "Kain fights off shadow ghouls in the ruined wasteland, using a volatile exorcism spell.",
+        "image_prompt": "A lone warrior with white hair and scarred face casting a glowing silver rune spell against shadowy demonic creatures in a shattered, floating-island fantasy world."
+      },
+      {
+        "caption": "Kain clashes blades with Inquisitor Vane among ancient gothic ruins.",
+        "image_prompt": "Two warriors dueling on a crumbling stone bridge over an endless abyss; one wields a glowing holy sword in silver armor, the other a dark trench coat and a glowing rune blade."
+      },
+      {
+        "caption": "Kain confronts his future self beneath a fractured, twisting sky.",
+        "image_prompt": "A grim warrior standing face to face with his own shadowy doppelganger amidst floating gothic debris under a dark, eclipse-torn sky."
+      },
+      {
+        "caption": "A blinding column of light erupts as Kain casts the ultimate sacrifice spell.",
+        "image_prompt": "A massive pillar of brilliant white and gold light erupting from the center of a ruined dark fantasy landscape, dissolving a shadowy figure."
+      }
+    ]
+  },
+  "metrics": {
+    "distinct_1": 0.52,
+    "distinct_2": 0.911,
+    "brief_coverage": 0.632,
+    "brief_terms_found": [
+      "exorcist",
+      "forgotten",
+      "future",
+      "lone",
+      "magic",
+      "memory",
+      "self",
+      "shattered",
+      "spell",
+      "truth",
+      "uncover",
+      "world"
+    ],
+    "brief_terms_missing": [
+      "caster",
+      "costs",
+      "exists",
+      "powers",
+      "protagonist's",
+      "real",
+      "villain"
+    ],
+    "character_presence": 0.833,
+    "word_count": 999,
+    "length_ratio": 0.76,
+    "structure_score": 1.0,
+    "llm_calls": 2,
+    "latency_ms": 12091
+  },
+  "human_rating": null,
+  "scenes": [
+    {
+      "index": 1,
+      "caption": "Kain fights off shadow ghouls in the ruined wasteland, using a volatile exorcism spell.",
+      "image_prompt": "A lone warrior with white hair and scarred face casting a glowing silver rune spell against shadowy demonic creatures in a shattered, floating-island fantasy world.. Characters: Kain: White hair, cold grey eyes, scarred face, wearing a tattered dark trench coat lined with wards.; Vane: Short black hair, piercing amber eyes, wearing heavy silver inquisitor armor and wielding a glowing holy blade.; The Eclipse Entity: Silver hair, hollow glowing eyes, cloaked in shifting shadows wearing a corrupted version of Kain's trench coat.. Style: polished anime fantasy illustration, wide cinematic scene, characters shown at medium distance within a detailed environment, soft dramatic lighting, moody twilight palette with violet highlights, painterly, beautiful. No close-up faces, no gore, no text, no captions, no watermark."
+    },
+    {
+      "index": 2,
+      "caption": "Kain clashes blades with Inquisitor Vane among ancient gothic ruins.",
+      "image_prompt": "Two warriors dueling on a crumbling stone bridge over an endless abyss; one wields a glowing holy sword in silver armor, the other a dark trench coat and a glowing rune blade.. Characters: Kain: White hair, cold grey eyes, scarred face, wearing a tattered dark trench coat lined with wards.; Vane: Short black hair, piercing amber eyes, wearing heavy silver inquisitor armor and wielding a glowing holy blade.; The Eclipse Entity: Silver hair, hollow glowing eyes, cloaked in shifting shadows wearing a corrupted version of Kain's trench coat.. Style: polished anime fantasy illustration, wide cinematic scene, characters shown at medium distance within a detailed environment, soft dramatic lighting, moody twilight palette with violet highlights, painterly, beautiful. No close-up faces, no gore, no text, no captions, no watermark."
+    },
+    {
+      "index": 3,
+      "caption": "Kain confronts his future self beneath a fractured, twisting sky.",
+      "image_prompt": "A grim warrior standing face to face with his own shadowy doppelganger amidst floating gothic debris under a dark, eclipse-torn sky.. Characters: Kain: White hair, cold grey eyes, scarred face, wearing a tattered dark trench coat lined with wards.; Vane: Short black hair, piercing amber eyes, wearing heavy silver inquisitor armor and wielding a glowing holy blade.; The Eclipse Entity: Silver hair, hollow glowing eyes, cloaked in shifting shadows wearing a corrupted version of Kain's trench coat.. Style: polished anime fantasy illustration, wide cinematic scene, characters shown at medium distance within a detailed environment, soft dramatic lighting, moody twilight palette with violet highlights, painterly, beautiful. No close-up faces, no gore, no text, no captions, no watermark."
+    },
+    {
+      "index": 4,
+      "caption": "A blinding column of light erupts as Kain casts the ultimate sacrifice spell.",
+      "image_prompt": "A massive pillar of brilliant white and gold light erupting from the center of a ruined dark fantasy landscape, dissolving a shadowy figure.. Characters: Kain: White hair, cold grey eyes, scarred face, wearing a tattered dark trench coat lined with wards.; Vane: Short black hair, piercing amber eyes, wearing heavy silver inquisitor armor and wielding a glowing holy blade.; The Eclipse Entity: Silver hair, hollow glowing eyes, cloaked in shifting shadows wearing a corrupted version of Kain's trench coat.. Style: polished anime fantasy illustration, wide cinematic scene, characters shown at medium distance within a detailed environment, soft dramatic lighting, moody twilight palette with violet highlights, painterly, beautiful. No close-up faces, no gore, no text, no captions, no watermark."
+    }
+  ]
+}

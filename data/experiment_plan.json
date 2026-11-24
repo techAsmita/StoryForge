@@ -1,0 +1,47 @@
+{
+  "description": "Every idea was generated with all four prompting strategies at temperature 0.9, and with direct prompting at temperatures 0.3 and 1.5 (temperature sweep). Top-p 0.95, top-k 40 and max output tokens 4096 were held constant.",
+  "sampling": { "top_p": 0.95, "top_k": 40, "max_output_tokens": 4096 },
+  "variants": [
+    { "strategy": "direct", "temperature": 0.9 },
+    { "strategy": "interview", "temperature": 0.9 },
+    { "strategy": "cot", "temperature": 0.9 },
+    { "strategy": "tot", "temperature": 0.9 },
+    { "strategy": "direct", "temperature": 0.3 },
+    { "strategy": "direct", "temperature": 1.5 }
+  ],
+  "ideas": [
+    {
+      "title": "The Shattered Veil",
+      "idea": {
+        "protagonist": "A lone exorcist with forgotten powers",
+        "goal": "Uncover the truth behind a shattered world",
+        "genre": "Dark Fantasy",
+        "world_rule": "Magic exists, but every spell costs the caster a memory",
+        "ending_twist": "The real villain is the protagonist's future self"
+      },
+      "plot": { "tone": 30, "conflict": 80, "romance": 30, "action": 85, "length": 60 }
+    },
+    {
+      "title": "Neon Requiem",
+      "idea": {
+        "protagonist": "A teenage repair robot who has just gained the ability to dream",
+        "goal": "Find out who erased the last human colony on Mars from every record",
+        "genre": "Sci-Fi",
+        "world_rule": "Machines are forbidden from keeping memories longer than seven days",
+        "ending_twist": "The robot itself erased the colony to protect the humans"
+      },
+      "plot": { "tone": 50, "conflict": 60, "romance": 10, "action": 40, "length": 50 }
+    },
+    {
+      "title": "The Cherry Blossom Café",
+      "idea": {
+        "protagonist": "A shy café owner who can hear what people's coffee orders really mean",
+        "goal": "Save the café from closing before the cherry blossom festival",
+        "genre": "Slice of Life",
+        "world_rule": "The gift only works on strangers, never on people she loves",
+        "ending_twist": "The rival café owner was her childhood pen pal all along"
+      },
+      "plot": { "tone": 90, "conflict": 30, "romance": 90, "action": 10, "length": 40 }
+    }
+  ]
+}

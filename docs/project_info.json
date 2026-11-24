@@ -1,0 +1,20 @@
+{
+  "group_no": "09",
+  "project_title": "StoryForge: A Multimodal Story Generation Studio",
+  "short_title": "StoryForge",
+  "subtitle": "Conditional text generation, prompt engineering and text-to-image generation with evaluation",
+  "course_code": "UCS748",
+  "course_name": "Generative AI",
+  "session": "July – December 2026",
+  "batch": "4C14",
+  "members": [
+    { "name": "Rayan Sharma", "roll": "102303101" },
+    { "name": "Tanya Verma", "roll": "102303097" },
+    { "name": "Asmita Roy", "roll": "102303115" }
+  ],
+  "supervisor": "Dr. Rajkumar Tekchandani",
+  "department": "Department of Computer Science and Engineering",
+  "institute": "Thapar Institute of Engineering and Technology, Patiala",
+  "github_url": "https://github.com/techAsmita/StoryForge",
+  "month_year": "November 2026"
+}

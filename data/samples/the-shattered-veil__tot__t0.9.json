@@ -1,0 +1,227 @@
+{
+  "title": "Shattered Recollections",
+  "idea": {
+    "protagonist": "A lone exorcist with forgotten powers",
+    "goal": "Uncover the truth behind a shattered world",
+    "genre": "Dark Fantasy",
+    "world_rule": "Magic exists, but every spell costs the caster a memory",
+    "ending_twist": "The real villain is the protagonist's future self"
+  },
+  "plot": {
+    "tone": 30,
+    "conflict": 80,
+    "romance": 30,
+    "action": 85,
+    "length": 60
+  },
+  "sampling": {
+    "temperature": 0.9,
+    "top_p": 0.95,
+    "top_k": 40,
+    "max_output_tokens": 4096,
+    "seed": null
+  },
+  "strategy": "tot",
+  "provider": "gemini",
+  "model": "gemini-3.5-flash-lite",
+  "created_at": "2026-11-10T11:12:55.287523+05:30",
+  "prompts": [
+    {
+      "step": "branches",
+      "prompt": "STORY BRIEF\n- Protagonist: A lone exorcist with forgotten powers\n- Goal: Uncover the truth behind a shattered world\n- Genre: Dark Fantasy\n- World rule (must matter to the plot): Magic exists, but every spell costs the caster a memory\n- Ending twist (reveal near the climax, set it up earlier): The real villain is the protagonist's future self\n- Tone: dark and grim (30/100 toward light)\n- Conflict level: high (80/100)\n- Romance: none or minimal (30/100)\n- Action intensity: intense battles (85/100)\n- Length: 4 chapters of about 330 words each\n\nPropose 3 clearly different plot branches for this story. Score each from 1-10 on originality, coherence and fit_to_brief, then choose the best one.\nReturn JSON: {\"branches\": [{\"id\": \"A\"|\"B\"|\"C\", \"premise\": string, \"scores\": {\"originality\": int, \"coherence\": int, \"fit_to_brief\": int}}], \"selected\": \"A\"|\"B\"|\"C\", \"reason\": string}",
+      "latency_ms": 3391.4
+    },
+    {
+      "step": "write",
+      "prompt": "STORY BRIEF\n- Protagonist: A lone exorcist with forgotten powers\n- Goal: Uncover the truth behind a shattered world\n- Genre: Dark Fantasy\n- World rule (must matter to the plot): Magic exists, but every spell costs the caster a memory\n- Ending twist (reveal near the climax, set it up earlier): The real villain is the protagonist's future self\n- Tone: dark and grim (30/100 toward light)\n- Conflict level: high (80/100)\n- Romance: none or minimal (30/100)\n- Action intensity: intense battles (85/100)\n- Length: 4 chapters of about 330 words each\n\nSELECTED PLOT BRANCH (A): Kael, an amnesiac exorcist, battles monstrous aberrations while slowly losing his childhood memories to cast powerful spells. He tracks clues to the world's fracture to a mysterious entity known as the 'Architect'. In the climax, the Architect removes his mask to reveal an elderly Kael who shattered the world to prevent a worse apocalyptic timeline, forcing present Kael to fight his own destiny.\n\nWrite the story. Return JSON with this schema:\n{\n  \"title\": string,\n  \"logline\": string (2-3 sentence teaser),\n  \"characters\": [{\"name\": string, \"role\": \"protagonist\"|\"ally\"|\"rival\"|\"villain\"|\"mentor\"|\"other\",\n                  \"visual_description\": string (hair, eyes, outfit; reused for every image)}]  (3-5 items),\n  \"relationships\": [{\"source\": name, \"target\": name, \"label\": short string like \"ALLY\", \"CONFLICT\"}],\n  \"beats\": [{\"name\": one of \"Inciting Incident\",\"Call to Action\",\"Rising Conflict\",\"Midpoint Turn\",\"Climax\",\"Resolution\",\n             \"summary\": one sentence}]  (exactly 6, in that order),\n  \"chapters\": [{\"title\": string, \"text\": string}],\n  \"scenes\": [{\"caption\": short string, \"image_prompt\": visual description of one key moment, no dialogue}]  (exactly 4)\n}",
+      "latency_ms": 7394.8
+    }
+  ],
+  "intermediate_steps": {
+    "branches": {
+      "branches": [
+        {
+          "id": "A",
+          "premise": "Kael, an amnesiac exorcist, battles monstrous aberrations while slowly losing his childhood memories to cast powerful spells. He tracks clues to the world's fracture to a mysterious entity known as the 'Architect'. In the climax, the Architect removes his mask to reveal an elderly Kael who shattered the world to prevent a worse apocalyptic timeline, forcing present Kael to fight his own destiny.",
+          "scores": {
+            "originality": 9,
+            "coherence": 9,
+            "fit_to_brief": 10
+          }
+        },
+        {
+          "id": "B",
+          "premise": "Exorcist Lyra uses forbidden spells to piece together the shattered continent, sacrificing her memories of her family along the way. She discovers prophecies pointing to a supreme dark god who broke the earth. Upon reaching the core, she realizes the dark god is actually her future self, who sacrificed her humanity and memories to rewrite reality after failing to save the world the first time.",
+          "scores": {
+            "originality": 8,
+            "coherence": 8,
+            "fit_to_brief": 9
+          }
+        },
+        {
+          "id": "C",
+          "premise": "Vance wanders the floating ruins of a broken world, slaying demons with magic that erases his past. He is guided by a mysterious voice through a grand cathedral. When he reaches the sanctum, the voice belongs to his future self, who orchestrated the world's destruction and Vance's memory loss as part of a brutal loop to harvest enough magical energy to slay an outer god.",
+          "scores": {
+            "originality": 7,
+            "coherence": 9,
+            "fit_to_brief": 8
+          }
+        }
+      ],
+      "selected": "A",
+      "reason": "Branch A seamlessly integrates the memory-cost magic system into the protagonist's amnesiac condition and delivers a powerful, emotionally resonant time-loop twist where the future self is the antagonist."
+    }
+  },
+  "output": {
+    "title": "Shattered Recollections",
+    "logline": "An amnesiac exorcist battles monstrous aberrations in a fractured dark fantasy world, sacrificing his own memories with every spell. When he finally confronts the mysterious Architect, he uncovers a terrifying truth that forces him to fight his own destiny.",
+    "characters": [
+      {
+        "name": "Kael",
+        "role": "protagonist",
+        "visual_description": "White hair, piercing blue eyes, wearing a worn dark leather exorcist coat lined with silver runes."
+      },
+      {
+        "name": "The Architect",
+        "role": "villain",
+        "visual_description": "Silver hair, tired eyes, wearing a cracked porcelain mask and tattered black ceremonial robes."
+      },
+      {
+        "name": "Lyra",
+        "role": "ally",
+        "visual_description": "Dark braided hair, amber eyes, wearing reinforced scout leather armor and carrying a glowing lantern."
+      }
+    ],
+    "relationships": [
+      {
+        "source": "Kael",
+        "target": "The Architect",
+        "source_target": "MORTAL ENEMY"
+      },
+      {
+        "source": "Kael",
+        "target": "Lyra",
+        "source_target": "COMPANION"
+      }
+    ],
+    "beats": [
+      {
+        "name": "Inciting Incident",
+        "summary": "Kael fights an aberrant beast and loses his earliest childhood memory to cast a sealing spell."
+      },
+      {
+        "name": "Call to Action",
+        "summary": "Guided by Lyra, Kael tracks the source of the world's fracture to a massive obsidian citadel."
+      },
+      {
+        "name": "Rising Conflict",
+        "summary": "The duo battles through hordes of aberrations, forcing Kael to burn more memories to survive."
+      },
+      {
+        "name": "Midpoint Turn",
+        "summary": "Kael realizes the magic he uses is directly tied to the gradual shattering of the world itself."
+      },
+      {
+        "name": "Climax",
+        "summary": "The Architect removes his mask to reveal he is an older Kael, sparking a bitter battle against his future self."
+      },
+      {
+        "name": "Resolution",
+        "summary": "Kael chooses to face an uncertain future, destroying the loop and forging a new path for the broken world."
+      }
+    ],
+    "chapters": [
+      {
+        "title": "Chapter 1: Ashes of the Mind",
+        "text": "The fog clung to the jagged cliffs like a shroud of sorrow. Kael knelt in the mud, his breath ragged, sword planted firmly in the earth. Before him, a multi-eyed aberration hissed, its flesh rippling with dark corruption. To banish the beast, Kael raised his hand and carved a glowing blue rune into the air. Power surged through his veins, burning away the darkness, but the cost was instantaneous. A piece of his past vanished; he could no longer remember the face of his mother, nor the sound of his hometown's bells. Every spell cast was a trade of the soul. Beside him, Lyra steadied her lantern, her amber eyes filled with grim concern. 'You used too much magic, Kael. What did you lose this time?' she asked softly. Kael stared at his trembling hands, the void in his mind growing larger with every victory. 'My mother,' he whispered, the name tasting hollow. The world around them was literally falling apart, floating islands tethered only by fading magical chains. Their journey to find the root of this decay was necessary, yet Kael feared that by the time they reached the end, there would be nothing left of who he once was. With a heavy heart, he stood up, shouldered his blade, and pushed forward into the dark forest."
+      },
+      {
+        "title": "Chapter 2: The Obsidian Citadel",
+        "text": "Days bled into nights as Kael and Lyra crossed the fractured canyons. Gravity warped unpredictably, chunks of earth floating lazily in the purple sky. Aberrations hunted them from the shadows, testing Kael's remaining sanity. Each battle demanded magic, and each spell demanded a sacrifice of memory. By the time they reached the towering gates of the Obsidian Citadel, Kael had forgotten his first love, his favorite season, and the name of his childhood dog. He was becoming a ghost inhabiting a living vessel. The citadel hummed with a resonance that matched the pulse in Kael's head. Inside, the walls were inscribed with glowing runes that detailed the systematic breaking of the world. Lyra studied a mural depicting a cloaked figure shattering the core seals. 'This magic isn't just killing you, Kael. It's what broke the world in the first place,' she noted, her voice echoing in the vast hall. Kael felt a strange, deep familiarity with the architecture, as if his hands had once laid these very stones. They pressed deeper into the sanctum, where the air grew thick with ancient power and the unmistakable presence of the Architect, the mastermind behind the world's ruin."
+      },
+      {
+        "title": "Chapter 3: The Mirror of Fate",
+        "text": "In the center of the sanctum stood the Architect. Draped in tattered ceremonial robes, the entity awaited them with calm resignation. 'You are late, Kael,' a voice echoed, raspy and worn with age. Without hesitation, Kael drew his blade, channeling the last of his stable memories into a devastating shockwave of blue flame. The Architect deflected the strike effortlessly, countering with a barrier of black light that threw Kael against the obsidian wall. Lyra rushed forward to aid him, but a wave of telekinetic force pinned her to the floor. Kael forced himself up, blood dripping from his brow, his mind a fractured wasteland of forgotten years. 'Who are you?' Kael roared, stepping forward for one final, desperate assault. The Architect sighed, slowly raising trembling hands to the side of his face. With a soft click, the cracked porcelain mask was removed and set aside upon the stone floor. Kael froze, his sword slipping from his numb fingers. Staring back at him with tired blue eyes and white hair was an older, battle-scarred version of Kael himself."
+      },
+      {
+        "title": "Chapter 4: Breaking the Loop",
+        "text": "Future Kael looked at his younger self with infinite sorrow. 'I shattered the world, Kael, to stop an apocalypse far worse than this broken reality,' the older man explained, his voice heavy with centuries of regret. 'Every memory you lose feeds the seal holding back the ultimate void.' Present Kael shook his head, refusing to accept a destiny built on destruction and stolen identity. 'There has to be another way than this endless loop of suffering,' Kael shouted, summoning a blade of pure willpower, refusing to use magic that cost him his humanity. The final clash was fierce and brutal, past and future colliding in a storm of steel and raw determination. With a powerful, decisive strike, Kael shattered the older self's core talisman, breaking the temporal anchor. The citadel began to collapse around them as the Obsidian spires dissolved into stardust. Lyra broke free and grabbed Kael's arm, dragging him toward the escaping portal just as the ceiling caved in. Emerging into the fragile, newly healing dawn of the outside world, Kael looked at his scarred hands. He remembered very little, but as he looked at the horizon, he knew he was finally free to write his own tomorrow."
+      }
+    ],
+    "scenes": [
+      {
+        "caption": "Kael casts a sealing spell, sacrificing a childhood memory.",
+        "image_prompt": "A lone white-haired exorcist in a dark leather coat casting glowing blue runes in a misty, fractured dark fantasy landscape."
+      },
+      {
+        "caption": "Approaching the Obsidian Citadel under a purple, floating sky.",
+        "image_prompt": "Two figures walking toward a massive, dark obsidian citadel with floating chunks of earth surrounding them in a twilight sky."
+      },
+      {
+        "caption": "The Architect removes his mask to reveal an older Kael.",
+        "image_prompt": "An older white-haired man in tattered robes holding a cracked porcelain mask, staring down a younger version of himself in a grand dark sanctum."
+      },
+      {
+        "caption": "Escaping the collapsing citadel into a new dawn.",
+        "image_prompt": "An exorcist and a female companion running out of a crumbling dark castle toward a bright, healing sunrise over a fractured world."
+      }
+    ]
+  },
+  "metrics": {
+    "distinct_1": 0.528,
+    "distinct_2": 0.918,
+    "brief_coverage": 0.526,
+    "brief_terms_found": [
+      "exorcist",
+      "forgotten",
+      "future",
+      "magic",
+      "memory",
+      "self",
+      "shattered",
+      "spell",
+      "truth",
+      "world"
+    ],
+    "brief_terms_missing": [
+      "caster",
+      "costs",
+      "exists",
+      "lone",
+      "powers",
+      "protagonist's",
+      "real",
+      "uncover",
+      "villain"
+    ],
+    "character_presence": 1.0,
+    "word_count": 800,
+    "length_ratio": 0.61,
+    "structure_score": 1.0,
+    "llm_calls": 2,
+    "latency_ms": 10786
+  },
+  "human_rating": null,
+  "scenes": [
+    {
+      "index": 1,
+      "caption": "Kael casts a sealing spell, sacrificing a childhood memory.",
+      "image_prompt": "A lone white-haired exorcist in a dark leather coat casting glowing blue runes in a misty, fractured dark fantasy landscape.. Characters: Kael: White hair, piercing blue eyes, wearing a worn dark leather exorcist coat lined with silver runes.; The Architect: Silver hair, tired eyes, wearing a cracked porcelain mask and tattered black ceremonial robes.; Lyra: Dark braided hair, amber eyes, wearing reinforced scout leather armor and carrying a glowing lantern.. Style: detailed anime illustration, cinematic composition, dramatic lighting, moody dark palette, deep shadows. No text, no captions, no watermark."
+    },
+    {
+      "index": 2,
+      "caption": "Approaching the Obsidian Citadel under a purple, floating sky.",
+      "image_prompt": "Two figures walking toward a massive, dark obsidian citadel with floating chunks of earth surrounding them in a twilight sky.. Characters: Kael: White hair, piercing blue eyes, wearing a worn dark leather exorcist coat lined with silver runes.; The Architect: Silver hair, tired eyes, wearing a cracked porcelain mask and tattered black ceremonial robes.; Lyra: Dark braided hair, amber eyes, wearing reinforced scout leather armor and carrying a glowing lantern.. Style: detailed anime illustration, cinematic composition, dramatic lighting, moody dark palette, deep shadows. No text, no captions, no watermark."
+    },
+    {
+      "index": 3,
+      "caption": "The Architect removes his mask to reveal an older Kael.",
+      "image_prompt": "An older white-haired man in tattered robes holding a cracked porcelain mask, staring down a younger version of himself in a grand dark sanctum.. Characters: Kael: White hair, piercing blue eyes, wearing a worn dark leather exorcist coat lined with silver runes.; The Architect: Silver hair, tired eyes, wearing a cracked porcelain mask and tattered black ceremonial robes.; Lyra: Dark braided hair, amber eyes, wearing reinforced scout leather armor and carrying a glowing lantern.. Style: detailed anime illustration, cinematic composition, dramatic lighting, moody dark palette, deep shadows. No text, no captions, no watermark."
+    },
+    {
+      "index": 4,
+      "caption": "Escaping the collapsing citadel into a new dawn.",
+      "image_prompt": "An exorcist and a female companion running out of a crumbling dark castle toward a bright, healing sunrise over a fractured world.. Characters: Kael: White hair, piercing blue eyes, wearing a worn dark leather exorcist coat lined with silver runes.; The Architect: Silver hair, tired eyes, wearing a cracked porcelain mask and tattered black ceremonial robes.; Lyra: Dark braided hair, amber eyes, wearing reinforced scout leather armor and carrying a glowing lantern.. Style: detailed anime illustration, cinematic composition, dramatic lighting, moody dark palette, deep shadows. No text, no captions, no watermark."
+    }
+  ]
+}

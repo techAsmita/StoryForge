@@ -1,0 +1,197 @@
+{
+  "title": "Brewing Blossom Hearts",
+  "idea": {
+    "protagonist": "A shy café owner who can hear what people's coffee orders really mean",
+    "goal": "Save the café from closing before the cherry blossom festival",
+    "genre": "Slice of Life",
+    "world_rule": "The gift only works on strangers, never on people she loves",
+    "ending_twist": "The rival café owner was her childhood pen pal all along"
+  },
+  "plot": {
+    "tone": 90,
+    "conflict": 30,
+    "romance": 90,
+    "action": 10,
+    "length": 40
+  },
+  "sampling": {
+    "temperature": 0.9,
+    "top_p": 0.95,
+    "top_k": 40,
+    "max_output_tokens": 4096,
+    "seed": null
+  },
+  "strategy": "cot",
+  "provider": "gemini",
+  "model": "gemini-3.5-flash-lite",
+  "created_at": "2026-11-24T08:04:23.418537+05:30",
+  "prompts": [
+    {
+      "step": "write",
+      "prompt": "STORY BRIEF\n- Protagonist: A shy café owner who can hear what people's coffee orders really mean\n- Goal: Save the café from closing before the cherry blossom festival\n- Genre: Slice of Life\n- World rule (must matter to the plot): The gift only works on strangers, never on people she loves\n- Ending twist (reveal near the climax, set it up earlier): The rival café owner was her childhood pen pal all along\n- Tone: light and hopeful (90/100 toward light)\n- Conflict level: low (30/100)\n- Romance: central (90/100)\n- Action intensity: low (10/100)\n- Length: 4 chapters of about 270 words each\n\nWork in explicit stages. First fill the \"plan\" field: (1) the world and how its rule works, (2) each character's motivation, (3) the arc across the six beats and where the twist is foreshadowed. Then write the story so it follows your plan.\n\nWrite the story. Return JSON with this schema:\n{\n  \"plan\": {\"world\": string, \"characters\": string, \"arc\": string},\n  \"title\": string,\n  \"logline\": string (2-3 sentence teaser),\n  \"characters\": [{\"name\": string, \"role\": \"protagonist\"|\"ally\"|\"rival\"|\"villain\"|\"mentor\"|\"other\",\n                  \"visual_description\": string (hair, eyes, outfit; reused for every image)}]  (3-5 items),\n  \"relationships\": [{\"source\": name, \"target\": name, \"label\": short string like \"ALLY\", \"CONFLICT\"}],\n  \"beats\": [{\"name\": one of \"Inciting Incident\",\"Call to Action\",\"Rising Conflict\",\"Midpoint Turn\",\"Climax\",\"Resolution\",\n             \"summary\": one sentence}]  (exactly 6, in that order),\n  \"chapters\": [{\"title\": short title WITHOUT \"Chapter\" or a number, \"text\": string}],\n  \"scenes\": [{\"caption\": short string, \"image_prompt\": visual description of one key moment, no dialogue}]  (exactly 4)\n}",
+      "latency_ms": 11720.0
+    }
+  ],
+  "intermediate_steps": {
+    "plan": {
+      "world": "A cozy neighborhood where magic hides in mundane routines. A barista hears the true emotional subtext of coffee orders, but strictly only from strangers, rendering it useless for those she grows close to.",
+      "characters": "Hana wants to save her struggling café out of love for her late grandfather. Ren, the handsome rival café owner, hides a soft heart and a past connection to Hana.",
+      "arc": "Spans four chapters hitting the six narrative beats. Hana uses her gift on customers to adapt the menu, discovers a clue about Ren, uncovers the pen pal twist at the climax, and saves the café with Ren's help."
+    }
+  },
+  "output": {
+    "title": "Brewing Blossom Hearts",
+    "logline": "A shy café owner uses her magical ability to read strangers' true desires through their coffee orders to save her shop. When her handsome rival is revealed as her childhood pen pal, a sweet romance blooms just in time for the cherry blossom festival.",
+    "characters": [
+      {
+        "name": "Hana",
+        "role": "protagonist",
+        "visual_description": "Soft dark hair tied in a loose bun, warm amber eyes, wearing a pastel green apron over a cream sweater."
+      },
+      {
+        "name": "Ren",
+        "role": "rival",
+        "visual_description": "Messy silver-streaked dark hair, kind blue eyes, wearing a sleek modern black barista uniform."
+      },
+      {
+        "name": "Sato",
+        "role": "ally",
+        "visual_description": "Round cheerful face, short grey hair, wearing a traditional baker's white outfit."
+      }
+    ],
+    "relationships": [
+      {
+        "source": "Hana",
+        "target": "Ren",
+        "label": "RIVALRY TO ROMANCE"
+      },
+      {
+        "source": "Hana",
+        "target": "Sato",
+        "label": "MENTOR"
+      }
+    ],
+    "beats": [
+      {
+        "name": "Inciting Incident",
+        "summary": "Hana learns her café faces imminent closure before the cherry blossom festival."
+      },
+      {
+        "name": "Call to Action",
+        "summary": "She uses her stranger-reading coffee gift to revamp the menu and attract locals."
+      },
+      {
+        "name": "Rising Conflict",
+        "summary": "Ren opens a flashy rival café nearby, but his strange, nostalgic choice of cherry-wood counter hints at a shared past."
+      },
+      {
+        "name": "Midpoint Turn",
+        "summary": "Hana tries to read Ren's order, but her gift fails, proving she already cares for him deeply."
+      },
+      {
+        "name": "Climax",
+        "summary": "Ren reveals his childhood letters to Hana, matching the exact vintage stationary she saved from her pen pal."
+      },
+      {
+        "name": "Resolution",
+        "summary": "They merge their shops for the festival, saving the café and sparking romance."
+      }
+    ],
+    "chapters": [
+      {
+        "title": "The Last Bean",
+        "text": "Hana wiped down the wooden counter of Blossom Brew, her grandfather's legacy, with a heavy heart. The eviction notice lay like an anchor in her drawer; unless she doubled her profits before the cherry blossom festival, the shop would close forever. Shy by nature, Hana possessed a peculiar secret: when a stranger ordered a drink, she heard their true emotional subtext. A businessman ordering a black espresso was actually muttering, I need the courage to apologize to my daughter. Hana adjusted her pastel green apron as the door chimed, bringing in a rush of brisk spring air. A handsome stranger with silver-streaked hair stepped up. When he ordered a simple chamomile tea, Hana's gift fell silent. She couldn't hear his inner voice. That meant, paradoxically, he wasn't a total stranger to her heart, even though she had never seen him before. He offered a warm, lopsided smile, sliding a cherry-wood token across the table—a subtle nod to childhood memories she kept hidden. Her grandfather always said magic was just love disguised as routine. With the festival only weeks away, Hana needed to understand what her neighborhood truly craved, and perhaps, figure out why this new stranger felt so strangely familiar."
+      },
+      {
+        "title": "A Menu of Secrets",
+        "text": "Armed with her unique auditory gift, Hana transformed Blossom Brew into a sanctuary of emotional healing. When a stressed student asked for a latte, Hana heard, I wish someone would tell me I'm doing enough. She served the latte with a custom honey heart and a handwritten note of encouragement. Word spread quickly through the cobblestone alleys. Customers flooded in, drawn not just by caffeine, but by the uncanny way Hana anticipated their unspoken needs. Yet, a shadow loomed across the street. A sleek, modern rival café had opened, boasting flashy neon lights and automated espresso machines. Its owner was the very same silver-haired man who had ordered chamomile tea. His name tag read Ren. Despite being competitors, Hana noticed Ren frequently glanced over with gentle concern, never letting his staff undercut her prices. Whenever Hana tried to focus her magical gift on Ren to suss out his business strategy, absolute silence met her ears. The rule was absolute: the gift only worked on strangers. Because she felt a growing, inexplicable affection for Ren's quiet kindness, her magic could no longer read him. Frustrated yet intrigued, she watched him arrange cherry blossom branches outside his shop, noticing he tied the ribbons with a distinct, left-handed knot she hadn't seen since childhood."
+      },
+      {
+        "title": "The Silent Cup",
+        "text": "The cherry blossom festival was just three days away, and Blossom Brew was nearly back on its feet, thanks to Hana's personalized brews. Still, the financial gap remained daunting. Determined to understand her enigmatic neighbor, Hana walked across the street during her break to visit Ren's café. The interior smelled of roasted hazelnut and old paper. Ren greeted her with a shy smile, sliding a cup of steaming green tea across the counter. 'On the house,' he said softly. Hana stared at the cup, hoping against hope for a magical whisper to reveal his intentions. Silence. Her heart beat a rapid, betraying rhythm against her ribs. She didn't view him as a stranger anymore; she cared for him deeply, and her magic acknowledged this bond by falling completely mute. Ren chuckled lightly, tracing the edge of his saucer. 'You're looking for answers in the steam, Hana. But some things can't be read—they have to be remembered.' Stunned, Hana froze. She had never told him her name. Ren reached beneath the counter and pulled out a faded, dog-eared notebook filled with pressed cherry blossoms and childhood sketches of magical coffee cups. Her breath caught in her throat as recognition flooded her senses."
+      },
+      {
+        "title": "Blossom Reunion",
+        "text": "Ren beamed, his blue eyes crinkling at the corners. 'It's me, Hana. Your old pen pal from across the prefecture. I opened my shop here just to help save yours, but I was too shy to just walk up and say hello.' The vintage cherry-wood counter he used, the left-handed ribbon knots, the shared love of floral tea—it all clicked into place. He wasn't a corporate rival; he was the boy who had mailed her comfort through letters when her grandfather first fell ill. Tears of joy welled in Hana's eyes. Instead of competing, they decided to merge their menus for the grand festival, combining modern flair with her grandfather's traditional warmth. When the cherry blossoms finally burst into full bloom overhead, painting the cobblestone streets in shades of pink, both cafés overflowed with laughing patrons. Hana stood behind her counter, no longer needing her magical gift to know what people felt; the bright, hopeful smiles around her said it all. Ren stepped beside her, gently lacing his fingers through hers. As he ordered a simple black coffee, Hana didn't hear a hidden subtext of worry. She only heard the quiet, happy rhythm of a future they would brew together."
+      }
+    ],
+    "scenes": [
+      {
+        "caption": "Hana listening intently at the counter",
+        "image_prompt": "A shy anime girl with dark hair in a bun and a green apron listening closely across a wooden café counter to a customer, warm soft lighting."
+      },
+      {
+        "caption": "Ren arranging cherry blossoms outside his modern rival café",
+        "image_prompt": "A handsome man with silver-streaked hair arranging pink cherry blossom branches outside a sleek, modern glass café storefront."
+      },
+      {
+        "caption": "The revelation of the childhood pen pal notebook",
+        "image_prompt": "Two baristas standing close together across a counter, looking down at an old dog-eared notebook filled with pressed flowers and sketches."
+      },
+      {
+        "caption": "A hopeful future under blooming cherry blossom trees",
+        "image_prompt": "A cozy café exterior overflowing with pink cherry blossom petals, happy customers outside, and a smiling couple holding hands in the doorway."
+      }
+    ]
+  },
+  "metrics": {
+    "distinct_1": 0.523,
+    "distinct_2": 0.934,
+    "brief_coverage": 0.682,
+    "brief_terms_found": [
+      "blossom",
+      "cherry",
+      "childhood",
+      "coffee",
+      "festival",
+      "gift",
+      "hear",
+      "never",
+      "only",
+      "orders",
+      "owner",
+      "people",
+      "rival",
+      "save",
+      "strangers"
+    ],
+    "brief_terms_missing": [
+      "along",
+      "closing",
+      "loves",
+      "mean",
+      "people's",
+      "really",
+      "works"
+    ],
+    "character_presence": 0.583,
+    "word_count": 826,
+    "length_ratio": 0.76,
+    "structure_score": 1.0,
+    "llm_calls": 1,
+    "latency_ms": 11720
+  },
+  "human_rating": null,
+  "scenes": [
+    {
+      "index": 1,
+      "caption": "Hana listening intently at the counter",
+      "image_prompt": "A shy anime girl with dark hair in a bun and a green apron listening closely across a wooden café counter to a customer, warm soft lighting.. Characters: Hana: Soft dark hair tied in a loose bun, warm amber eyes, wearing a pastel green apron over a cream sweater.; Ren: Messy silver-streaked dark hair, kind blue eyes, wearing a sleek modern black barista uniform.; Sato: Round cheerful face, short grey hair, wearing a traditional baker's white outfit.. Style: polished anime fantasy illustration, wide cinematic scene, characters shown at medium distance within a detailed environment, soft dramatic lighting, warm vibrant palette, soft golden light, painterly, beautiful. No close-up faces, no gore, no text, no captions, no watermark."
+    },
+    {
+      "index": 2,
+      "caption": "Ren arranging cherry blossoms outside his modern rival café",
+      "image_prompt": "A handsome man with silver-streaked hair arranging pink cherry blossom branches outside a sleek, modern glass café storefront.. Characters: Hana: Soft dark hair tied in a loose bun, warm amber eyes, wearing a pastel green apron over a cream sweater.; Ren: Messy silver-streaked dark hair, kind blue eyes, wearing a sleek modern black barista uniform.; Sato: Round cheerful face, short grey hair, wearing a traditional baker's white outfit.. Style: polished anime fantasy illustration, wide cinematic scene, characters shown at medium distance within a detailed environment, soft dramatic lighting, warm vibrant palette, soft golden light, painterly, beautiful. No close-up faces, no gore, no text, no captions, no watermark."
+    },
+    {
+      "index": 3,
+      "caption": "The revelation of the childhood pen pal notebook",
+      "image_prompt": "Two baristas standing close together across a counter, looking down at an old dog-eared notebook filled with pressed flowers and sketches.. Characters: Hana: Soft dark hair tied in a loose bun, warm amber eyes, wearing a pastel green apron over a cream sweater.; Ren: Messy silver-streaked dark hair, kind blue eyes, wearing a sleek modern black barista uniform.; Sato: Round cheerful face, short grey hair, wearing a traditional baker's white outfit.. Style: polished anime fantasy illustration, wide cinematic scene, characters shown at medium distance within a detailed environment, soft dramatic lighting, warm vibrant palette, soft golden light, painterly, beautiful. No close-up faces, no gore, no text, no captions, no watermark."
+    },
+    {
+      "index": 4,
+      "caption": "A hopeful future under blooming cherry blossom trees",
+      "image_prompt": "A cozy café exterior overflowing with pink cherry blossom petals, happy customers outside, and a smiling couple holding hands in the doorway.. Characters: Hana: Soft dark hair tied in a loose bun, warm amber eyes, wearing a pastel green apron over a cream sweater.; Ren: Messy silver-streaked dark hair, kind blue eyes, wearing a sleek modern black barista uniform.; Sato: Round cheerful face, short grey hair, wearing a traditional baker's white outfit.. Style: polished anime fantasy illustration, wide cinematic scene, characters shown at medium distance within a detailed environment, soft dramatic lighting, warm vibrant palette, soft golden light, painterly, beautiful. No close-up faces, no gore, no text, no captions, no watermark."
+    }
+  ]
+}

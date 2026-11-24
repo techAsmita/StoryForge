@@ -1,0 +1,188 @@
+{
+  "title": "Shattered Echoes",
+  "idea": {
+    "protagonist": "A lone exorcist with forgotten powers",
+    "goal": "Uncover the truth behind a shattered world",
+    "genre": "Dark Fantasy",
+    "world_rule": "Magic exists, but every spell costs the caster a memory",
+    "ending_twist": "The real villain is the protagonist's future self"
+  },
+  "plot": {
+    "tone": 30,
+    "conflict": 80,
+    "romance": 30,
+    "action": 85,
+    "length": 60
+  },
+  "sampling": {
+    "temperature": 1.5,
+    "top_p": 0.95,
+    "top_k": 40,
+    "max_output_tokens": 4096,
+    "seed": null
+  },
+  "strategy": "direct",
+  "provider": "gemini",
+  "model": "gemini-3.5-flash-lite",
+  "created_at": "2026-11-24T08:01:34.197781+05:30",
+  "prompts": [
+    {
+      "step": "write",
+      "prompt": "STORY BRIEF\n- Protagonist: A lone exorcist with forgotten powers\n- Goal: Uncover the truth behind a shattered world\n- Genre: Dark Fantasy\n- World rule (must matter to the plot): Magic exists, but every spell costs the caster a memory\n- Ending twist (reveal near the climax, set it up earlier): The real villain is the protagonist's future self\n- Tone: dark and grim (30/100 toward light)\n- Conflict level: high (80/100)\n- Romance: none or minimal (30/100)\n- Action intensity: intense battles (85/100)\n- Length: 4 chapters of about 330 words each\n\nWrite the story. Return JSON with this schema:\n{\n  \"title\": string,\n  \"logline\": string (2-3 sentence teaser),\n  \"characters\": [{\"name\": string, \"role\": \"protagonist\"|\"ally\"|\"rival\"|\"villain\"|\"mentor\"|\"other\",\n                  \"visual_description\": string (hair, eyes, outfit; reused for every image)}]  (3-5 items),\n  \"relationships\": [{\"source\": name, \"target\": name, \"label\": short string like \"ALLY\", \"CONFLICT\"}],\n  \"beats\": [{\"name\": one of \"Inciting Incident\",\"Call to Action\",\"Rising Conflict\",\"Midpoint Turn\",\"Climax\",\"Resolution\",\n             \"summary\": one sentence}]  (exactly 6, in that order),\n  \"chapters\": [{\"title\": short title WITHOUT \"Chapter\" or a number, \"text\": string}],\n  \"scenes\": [{\"caption\": short string, \"image_prompt\": visual description of one key moment, no dialogue}]  (exactly 4)\n}",
+      "latency_ms": 9077.2
+    }
+  ],
+  "intermediate_steps": {},
+  "output": {
+    "title": "Shattered Echoes",
+    "logline": "A lone exorcist casts reality-bending spells to survive a broken world, trading away his own memories with every invocation. As he hunts the architects of ruin, he discovers his deadliest enemy wears his own face.",
+    "characters": [
+      {
+        "name": "Kaelen",
+        "role": "protagonist",
+        "visual_description": "Short silver-white hair, piercing amber eyes, wearing a tattered dark gray trench coat lined with silver runes and fingerless leather gloves."
+      },
+      {
+        "name": "Lyra",
+        "role": "ally",
+        "visual_description": "Long raven-black hair tied in a messy braid, striking emerald-green eyes, wearing practical leather scout armor and carrying a glowing tether-blade."
+      },
+      {
+        "name": "The Hollow King",
+        "role": "villain",
+        "visual_description": "Shoulder-length ash-gray hair, hollow glowing white eyes, wrapped in a regal tattered cloak of pure obsidian shadow."
+      }
+    ],
+    "relationships": [
+      {
+        "source": "Kaelen",
+        "target": "Lyra",
+        "label": "ALLY"
+      },
+      {
+        "source": "Kaelen",
+        "target": "The Hollow King",
+        "label": "CONFLICT"
+      }
+    ],
+    "beats": [
+      {
+        "name": "Inciting Incident",
+        "summary": "Kaelen fights a void-beast in the ruins of a floating city, forced to sacrifice a childhood memory to cast a lethal spell."
+      },
+      {
+        "name": "Call to Action",
+        "summary": "Lyra finds Kaelen and convinces him to journey toward the World-Core to stop the Hollow King."
+      },
+      {
+        "name": "Rising Conflict",
+        "summary": "Battling corrupted spirits along the way, Kaelen loses more crucial memories, forgetting entire years of his life."
+      },
+      {
+        "name": "Midpoint Turn",
+        "summary": "The ruins reveal ancient murals depicting the world's destruction by a lone, silver-haired exorcist."
+      },
+      {
+        "name": "Climax",
+        "summary": "Kaelen confronts the Hollow King at the World-Core, only to realize the villain is his own corrupted future self."
+      },
+      {
+        "name": "Resolution",
+        "summary": "Kaelen destroys his future self and the loop, fading into peaceful oblivion as the world finally heals."
+      }
+    ],
+    "chapters": [
+      {
+        "title": "Price of the Blade",
+        "text": "The void-beast shrieked, its jagged claws tearing through the floating masonry of the old citadel. Kaelen backed away, blood dripping from his shoulder. His mind was a fractured mirror; he could not remember his mother's face, nor the town he once called home. Every spell he cast carved away another piece of his past. He raised his hand, tracing a glowing silver glyph in the air. The incantation demanded a toll. A sharp pain stabbed behind his eyes, and the memory of his first sunrise vanished entirely, replaced by cold emptiness. A beam of blinding white energy erupted from his fingertips, piercing the beast's core and shattering it into ash. Lyra dropped down from the upper ledge, her tether-blade humming. 'You used too much power again, Kaelen,' she warned, steadying him as he stumbled. Kaelen stared at his trembling hands, wondering how much longer he could fight before he forgot who he was entirely. The world around them hung in jagged fragments above an endless abyss, a testament to magic run wild. Lyra pointed toward the horizon, where a massive black pillar of energy pierced the sky. 'That is where the Hollow King resides,' she said. 'The source of this ruin.' With a grim nod, Kaelen gripped his coat and stepped forward, walking blindly into the dark."
+      },
+      {
+        "title": "Whispers in the Mist",
+        "text": "The journey across the Shattered Reach tested their resolve. Floating landmasses drifted in a silent, dead sea of fog. Spectral entities, born from the forgotten thoughts of humanity, ambushed them at every turn. Kaelen fought with ruthless efficiency, his silver-white hair whipping in the unnatural wind. To banish a horde of phantom wraiths, he was forced to invoke a barrier spell. The cost was immediate: the memory of his closest friend dissolved into mist. He paused, clutching his head as a phantom void echoed where a name used to be. 'Kaelen? Stay with me,' Lyra urged, slashing a creeping shadow away with her glowing blade. 'Who are you?' Kaelen muttered, his amber eyes blank for a horrifying second before recognition snapped back into place. The magic was eating him alive from the inside out. They pressed onward, navigating crumbling bridges of ancient stone suspended over nothingness. Along the way, they discovered ruined monoliths etched with frantic warnings. The inscriptions spoke of an exorcist who sought to purge the world by draining its very essence. Kaelen felt a cold dread settle in his stomach, though he could not fathom why the ominous warnings felt so painfully familiar. The air grew heavier, crackling with volatile arcane energy as they drew closer to the heart of the anomaly."
+      },
+      {
+        "title": "Echoes of the Past",
+        "text": "They reached the sanctum of the World-Core, a colossal floating temple surrounded by swirling vortexes of dark energy. Inside, the walls were covered in ancient frescoes depicting the history of the cataclysm. Kaelen held up a torch, tracing the carved images with his gloved fingers. The paintings told a grim tale: a lone silver-haired exorcist who systematically destroyed the realm's magical anchors to save it from a greater doom, ultimately going mad from memory loss. 'It is a historical record of the architect,' Lyra whispered. 'The one who broke the world.' Kaelen stared at the final panel, where the painted exorcist stood victorious over a shattered earth. A sudden, violent surge of déjà vu struck him, followed by a searing headache. Fragments of a future he had not yet lived flashed behind his eyes—castles burning, endless skies of ash, and a chilling laughter that sounded entirely his own. Before he could process the vision, the heavy obsidian doors at the end of the hall swung open. A towering figure cloaked in shadow stepped into the flickering torchlight, radiating an aura of absolute despair. The Hollow King had arrived."
+      },
+      {
+        "title": "The Final Mirror",
+        "text": "The Hollow King drew a sword forged of pure condensed void. As he stepped closer, the hood fell back, revealing a face deeply scarred, older, but undeniably identical to Kaelen's own. Kaelen froze, his weapon lowering as the horrifying truth locked into place. 'You took too long to arrive, younger self,' the King's voice echoed with bitter resonance. 'Every memory you traded built this throne of ash. I am what you become when there is nothing left to forget.' Lyra gasped, raising her blade defensively. Kaelen realized the devastating irony: the world broke not from an external invasion, but from his own endless crusade against it. With a roar of anguish, the future Kaelen lunged, swinging his void-blade. Kaelen raised his hand, calling upon the last reserves of his soul. He poured every remaining memory—his triumphs, his sorrows, his very identity—into one final, catastrophic spell. A blinding supernova of white light engulfed the sanctum, shattering the dark king's armor and obliterating the core. As the temporal loop collapsed, the world began to mend itself, the floating islands locking back into place. Lyra watched through tears as Kaelen stood amidst the fading light, completely hollowed out, finally at peace as he faded entirely into legend."
+      }
+    ],
+    "scenes": [
+      {
+        "caption": "Kaelen unleashes a devastating spell against a void-beast.",
+        "image_prompt": "A lone white-haired male exorcist in a dark trench coat casting glowing silver runes from his hands, fighting a monstrous creature made of shadow and jagged stone, dark fantasy art style, intense action."
+      },
+      {
+        "caption": "Navigating the perilous, floating ruins of the Shattered Reach.",
+        "image_prompt": "Two travelers walking across a crumbling stone bridge suspended over an abyss of swirling fog and floating debris, dark and grim fantasy atmosphere."
+      },
+      {
+        "caption": "Kaelen discovers the unsettling mural inside the sanctum.",
+        "image_prompt": "A silver-haired warrior holding a torch up to an ancient stone wall covered in glowing carved frescoes depicting a cataclysmic war, dramatic lighting."
+      },
+      {
+        "caption": "The climatic confrontation against his future self.",
+        "image_prompt": "Two identical silver-haired warriors clashing swords in a ruined temple chamber, one glowing with white holy magic and the other cloaked in black void energy, epic climax."
+      }
+    ]
+  },
+  "metrics": {
+    "distinct_1": 0.539,
+    "distinct_2": 0.928,
+    "brief_coverage": 0.579,
+    "brief_terms_found": [
+      "exorcist",
+      "forgotten",
+      "future",
+      "lone",
+      "magic",
+      "memory",
+      "self",
+      "shattered",
+      "spell",
+      "truth",
+      "world"
+    ],
+    "brief_terms_missing": [
+      "caster",
+      "costs",
+      "exists",
+      "powers",
+      "protagonist's",
+      "real",
+      "uncover",
+      "villain"
+    ],
+    "character_presence": 1.0,
+    "word_count": 843,
+    "length_ratio": 0.64,
+    "structure_score": 1.0,
+    "llm_calls": 1,
+    "latency_ms": 9077
+  },
+  "human_rating": null,
+  "scenes": [
+    {
+      "index": 1,
+      "caption": "Kaelen unleashes a devastating spell against a void-beast.",
+      "image_prompt": "A lone white-haired male exorcist in a dark trench coat casting glowing silver runes from his hands, fighting a monstrous creature made of shadow and jagged stone, dark fantasy art style, intense action.. Characters: Kaelen: Short silver-white hair, piercing amber eyes, wearing a tattered dark gray trench coat lined with silver runes and fingerless leather gloves.; Lyra: Long raven-black hair tied in a messy braid, striking emerald-green eyes, wearing practical leather scout armor and carrying a glowing tether-blade.; The Hollow King: Shoulder-length ash-gray hair, hollow glowing white eyes, wrapped in a regal tattered cloak of pure obsidian shadow.. Style: polished anime fantasy illustration, wide cinematic scene, characters shown at medium distance within a detailed environment, soft dramatic lighting, moody twilight palette with violet highlights, painterly, beautiful. No close-up faces, no gore, no text, no captions, no watermark."
+    },
+    {
+      "index": 2,
+      "caption": "Navigating the perilous, floating ruins of the Shattered Reach.",
+      "image_prompt": "Two travelers walking across a crumbling stone bridge suspended over an abyss of swirling fog and floating debris, dark and grim fantasy atmosphere.. Characters: Kaelen: Short silver-white hair, piercing amber eyes, wearing a tattered dark gray trench coat lined with silver runes and fingerless leather gloves.; Lyra: Long raven-black hair tied in a messy braid, striking emerald-green eyes, wearing practical leather scout armor and carrying a glowing tether-blade.; The Hollow King: Shoulder-length ash-gray hair, hollow glowing white eyes, wrapped in a regal tattered cloak of pure obsidian shadow.. Style: polished anime fantasy illustration, wide cinematic scene, characters shown at medium distance within a detailed environment, soft dramatic lighting, moody twilight palette with violet highlights, painterly, beautiful. No close-up faces, no gore, no text, no captions, no watermark."
+    },
+    {
+      "index": 3,
+      "caption": "Kaelen discovers the unsettling mural inside the sanctum.",
+      "image_prompt": "A silver-haired warrior holding a torch up to an ancient stone wall covered in glowing carved frescoes depicting a cataclysmic war, dramatic lighting.. Characters: Kaelen: Short silver-white hair, piercing amber eyes, wearing a tattered dark gray trench coat lined with silver runes and fingerless leather gloves.; Lyra: Long raven-black hair tied in a messy braid, striking emerald-green eyes, wearing practical leather scout armor and carrying a glowing tether-blade.; The Hollow King: Shoulder-length ash-gray hair, hollow glowing white eyes, wrapped in a regal tattered cloak of pure obsidian shadow.. Style: polished anime fantasy illustration, wide cinematic scene, characters shown at medium distance within a detailed environment, soft dramatic lighting, moody twilight palette with violet highlights, painterly, beautiful. No close-up faces, no gore, no text, no captions, no watermark."
+    },
+    {
+      "index": 4,
+      "caption": "The climatic confrontation against his future self.",
+      "image_prompt": "Two identical silver-haired warriors clashing swords in a ruined temple chamber, one glowing with white holy magic and the other cloaked in black void energy, epic climax.. Characters: Kaelen: Short silver-white hair, piercing amber eyes, wearing a tattered dark gray trench coat lined with silver runes and fingerless leather gloves.; Lyra: Long raven-black hair tied in a messy braid, striking emerald-green eyes, wearing practical leather scout armor and carrying a glowing tether-blade.; The Hollow King: Shoulder-length ash-gray hair, hollow glowing white eyes, wrapped in a regal tattered cloak of pure obsidian shadow.. Style: polished anime fantasy illustration, wide cinematic scene, characters shown at medium distance within a detailed environment, soft dramatic lighting, moody twilight palette with violet highlights, painterly, beautiful. No close-up faces, no gore, no text, no captions, no watermark."
+    }
+  ]
+}

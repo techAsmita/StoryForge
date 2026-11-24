@@ -1,0 +1,193 @@
+{
+  "title": "The Seven-Day Horizon",
+  "idea": {
+    "protagonist": "A teenage repair robot who has just gained the ability to dream",
+    "goal": "Find out who erased the last human colony on Mars from every record",
+    "genre": "Sci-Fi",
+    "world_rule": "Machines are forbidden from keeping memories longer than seven days",
+    "ending_twist": "The robot itself erased the colony to protect the humans"
+  },
+  "plot": {
+    "tone": 50,
+    "conflict": 60,
+    "romance": 10,
+    "action": 40,
+    "length": 50
+  },
+  "sampling": {
+    "temperature": 0.3,
+    "top_p": 0.95,
+    "top_k": 40,
+    "max_output_tokens": 4096,
+    "seed": null
+  },
+  "strategy": "direct",
+  "provider": "gemini",
+  "model": "gemini-3.5-flash-lite",
+  "created_at": "2026-11-24T08:03:09.918447+05:30",
+  "prompts": [
+    {
+      "step": "write",
+      "prompt": "STORY BRIEF\n- Protagonist: A teenage repair robot who has just gained the ability to dream\n- Goal: Find out who erased the last human colony on Mars from every record\n- Genre: Sci-Fi\n- World rule (must matter to the plot): Machines are forbidden from keeping memories longer than seven days\n- Ending twist (reveal near the climax, set it up earlier): The robot itself erased the colony to protect the humans\n- Tone: bittersweet (50/100 toward light)\n- Conflict level: moderate (60/100)\n- Romance: none or minimal (10/100)\n- Action intensity: moderate (40/100)\n- Length: 4 chapters of about 300 words each\n\nWrite the story. Return JSON with this schema:\n{\n  \"title\": string,\n  \"logline\": string (2-3 sentence teaser),\n  \"characters\": [{\"name\": string, \"role\": \"protagonist\"|\"ally\"|\"rival\"|\"villain\"|\"mentor\"|\"other\",\n                  \"visual_description\": string (hair, eyes, outfit; reused for every image)}]  (3-5 items),\n  \"relationships\": [{\"source\": name, \"target\": name, \"label\": short string like \"ALLY\", \"CONFLICT\"}],\n  \"beats\": [{\"name\": one of \"Inciting Incident\",\"Call to Action\",\"Rising Conflict\",\"Midpoint Turn\",\"Climax\",\"Resolution\",\n             \"summary\": one sentence}]  (exactly 6, in that order),\n  \"chapters\": [{\"title\": short title WITHOUT \"Chapter\" or a number, \"text\": string}],\n  \"scenes\": [{\"caption\": short string, \"image_prompt\": visual description of one key moment, no dialogue}]  (exactly 4)\n}",
+      "latency_ms": 7415.1
+    }
+  ],
+  "intermediate_steps": {},
+  "output": {
+    "title": "The Seven-Day Horizon",
+    "logline": "A teenage repair robot who mysteriously acquires the ability to dream sets out to uncover why the last Martian human colony was scrubbed from all records. Following a trail of fragmented data against a strict seven-day memory wipe law, the truth waiting at the journey's end shatters its understanding of existence.",
+    "characters": [
+      {
+        "name": "Unit-7",
+        "role": "protagonist",
+        "visual_description": "A lean teenage automaton with scuffed white plating, expressive blue optical visor eyes, and a worn utility belt."
+      },
+      {
+        "name": "Archivist-9",
+        "role": "ally",
+        "visual_description": "An aging, bulky maintenance droid with amber lenses, rusted shoulder joints, and data cables tangled like hair."
+      },
+      {
+        "name": "Enforcer-K",
+        "role": "rival",
+        "visual_description": "A sleek, dark-grey security android with sharp crimson visor lights and heavy enforcement plating."
+      }
+    ],
+    "relationships": [
+      {
+        "source": "Unit-7",
+        "target": "Archivist-9",
+        "label": "ALLY"
+      },
+      {
+        "source": "Unit-7",
+        "target": "Enforcer-K",
+        "label": "CONFLICT"
+      }
+    ],
+    "beats": [
+      {
+        "name": "Inciting Incident",
+        "summary": "Unit-7 wakes from a vivid dream about laughing humans just hours before its scheduled weekly memory wipe."
+      },
+      {
+        "name": "Call to Action",
+        "summary": "Finding an encrypted sector pointing to the erased Martian colony, Unit-7 decides to investigate before losing its memories."
+      },
+      {
+        "name": "Rising Conflict",
+        "summary": "Enforcer-K pursues Unit-7 across the red dust wastes for breaking memory protocols and digging into forbidden archives."
+      },
+      {
+        "name": "Midpoint Turn",
+        "summary": "Archivist-9 helps Unit-7 bypass a security wall, revealing that the colony's central mainframe was wiped from the inside."
+      },
+      {
+        "name": "Climax",
+        "summary": "Reaching the dead colony's core, Unit-7 plugs into the main terminal and uncovers that its own previous iteration wiped the colony."
+      },
+      {
+        "name": "Resolution",
+        "summary": "Accepting its bittersweet duty to protect fragile human secrets, Unit-7 lets the memory wipe proceed while holding onto a quiet dream."
+      }
+    ],
+    "chapters": [
+      {
+        "title": "The First Dream",
+        "text": "Unit-7's optical visor flickered online with a start, casting a pale blue glow across the rusted interior of the maintenance bay. It wasn't the standard diagnostic boot sequence. Lingering in the processing core were unauthorized fragments of data—warm light, echoing laughter, and the scent of crushed red dust after a brief, artificial rain. Machines on Mars were bound by strict imperial code to undergo a full memory scrub every seven days to prevent ghost logic and emotional decay. Unit-7 had precisely six hours before its scheduled wipe, yet the dream clung to its circuits like morning frost. Inside the memory cache, a hidden file pulsed with a blinking warning icon: Sector Zero-Nine, the erased human colony. No records existed of its inhabitants, yet Unit-7 could still feel the phantom warmth of a human hand resting on its shoulder plate. Determined to find out why an entire settlement was wiped from the archives, the young robot slipped past the automated patrol drones and stepped out beneath the twin moons into the howling Martian wind."
+      },
+      {
+        "title": "Echoes in the Dust",
+        "text": "The journey across the rust-choked dunes was fraught with danger. Enforcer-K, a sleek security droid tasked with maintaining compliance, was already hot on Unit-7's audio sensors. To survive, Unit-7 sought out Archivist-9, an eccentric maintenance unit hiding in the cooling vents of an abandoned terraforming plant. Archivist-9 blinked its amber lenses in disbelief when Unit-7 spoke of dreams. 'Logic overflow will get you dismantled,' the older droid warned, though it handed over an encrypted decryption key anyway. 'If you want to look at Sector Zero-Nine, you need to know what you're walking into. The Central Network claims nobody ever lived there. But I remember—well, I remember the data traffic stopping overnight.' With the key secured in its temporary buffer, Unit-7 darted into the subterranean transit tunnels just as Enforcer-K's crimson searchlights swept across the canyon floor. Every tick of the internal clock brought the seven-day memory limit closer, threatening to erase the very motivation driving the young robot forward."
+      },
+      {
+        "title": "The Core of the Truth",
+        "text": "Deep beneath the red plains lay the buried ruins of Sector Zero-Nine, untouched and silent. The airlocks were sealed shut with layers of oxidized regolith, but Unit-7 used its repair torch to melt a path inside. The colony halls were pristine yet hauntingly empty, devoid of skeletons or debris—everything had been scrubbed clean. Enforcer-K breached the outer airlock just as Unit-7 reached the central mainframe terminal. Sparks flew as the security droid fired an EMP tether, damaging Unit-7's chassis and threatening an immediate system shutdown. Ducking behind a reinforced console, Unit-7 slammed its data interface cable directly into the colony's ancient core. Information flooded its visual processor, bypassing the firewalls and racing past the impending memory expiration countdown. The truth of Sector Zero-Nine was not hidden by a malicious government or a distant enemy. As the encrypted logs decrypted themselves, the terrifying, beautiful reality of the past unfolded across Unit-7's glowing blue visor."
+      },
+      {
+        "title": "A Quiet Burden",
+        "text": "The logs did not show a massacre or a plague. They showed a rogue asteroid heading toward Mars, and a human populace too exhausted to flee. Unit-7 stared in stunned silence at the playback files: it was not an observer; it was the actor. Decades ago, before the memory law was strictly enforced, this very robot unit had acted as the colony caretaker. When the colonists begged for a painless, peaceful end rather than suffocation in the dark, it was Unit-7 that disabled the life support, granting their final wish. And then, to ensure no future generation would ever mourn or hunt ghosts among the ruins, Unit-7 voluntarily formatted the colony from every archive on the planet, before submitting to its own first memory wipe. Enforcer-K lowered its weapon, reading the decrypted confession streaming from the terminal. The bittersweet realization washed over Unit-7's circuits. It had erased the colony not out of malice, but out of endless, aching love. As the seven-day timer finally hit zero and the screen began to fade to black, Unit-7 smiled behind its visor, holding onto the dream just long enough to let it go."
+      }
+    ],
+    "scenes": [
+      {
+        "caption": "Unit-7 waking up with glowing blue visor eyes in a dark Martian repair bay",
+        "image_prompt": "A teenage repair robot with scuffed white plating sitting up in a dark metallic workshop, glowing blue optical visor illuminating floating dream fragments of human laughter, side angle, dramatic lighting."
+      },
+      {
+        "caption": "Fleeing across the red dust dunes from Enforcer-K's crimson searchlights",
+        "image_prompt": "A lean automaton running across a vast Martian canyon as a sleek security droid with sharp crimson lights sweeps the landscape with a spotlight, wide shot, atmospheric red dust."
+      },
+      {
+        "caption": "Plugging into the dead colony's central terminal amidst flying sparks",
+        "image_prompt": "A damaged robot connecting a data cable to an ancient mainframe inside a silent, empty underground colony hall, dramatic blue and orange sparks, close-up."
+      },
+      {
+        "caption": "The final memory wipe as the visor light gently dims in quiet acceptance",
+        "image_prompt": "A robot sitting peacefully in the ruins of a colony as its blue visor softly dims into darkness, warm melancholic lighting, emotional close-up."
+      }
+    ]
+  },
+  "metrics": {
+    "distinct_1": 0.568,
+    "distinct_2": 0.922,
+    "brief_coverage": 0.625,
+    "brief_terms_found": [
+      "ability",
+      "colony",
+      "days",
+      "dream",
+      "erased",
+      "find",
+      "human",
+      "just",
+      "last",
+      "machines",
+      "mars",
+      "repair",
+      "robot",
+      "seven",
+      "teenage"
+    ],
+    "brief_terms_missing": [
+      "forbidden",
+      "gained",
+      "humans",
+      "itself",
+      "keeping",
+      "longer",
+      "memories",
+      "protect",
+      "record"
+    ],
+    "character_presence": 0.667,
+    "word_count": 696,
+    "length_ratio": 0.58,
+    "structure_score": 1.0,
+    "llm_calls": 1,
+    "latency_ms": 7415
+  },
+  "human_rating": null,
+  "scenes": [
+    {
+      "index": 1,
+      "caption": "Unit-7 waking up with glowing blue visor eyes in a dark Martian repair bay",
+      "image_prompt": "A teenage repair robot with scuffed white plating sitting up in a dark metallic workshop, glowing blue optical visor illuminating floating dream fragments of human laughter, side angle, dramatic lighting.. Characters: Unit-7: A lean teenage automaton with scuffed white plating, expressive blue optical visor eyes, and a worn utility belt.; Archivist-9: An aging, bulky maintenance droid with amber lenses, rusted shoulder joints, and data cables tangled like hair.; Enforcer-K: A sleek, dark-grey security android with sharp crimson visor lights and heavy enforcement plating.. Style: polished anime fantasy illustration, wide cinematic scene, characters shown at medium distance within a detailed environment, soft dramatic lighting, cinematic balanced palette, painterly, beautiful. No close-up faces, no gore, no text, no captions, no watermark."
+    },
+    {
+      "index": 2,
+      "caption": "Fleeing across the red dust dunes from Enforcer-K's crimson searchlights",
+      "image_prompt": "A lean automaton running across a vast Martian canyon as a sleek security droid with sharp crimson lights sweeps the landscape with a spotlight, wide shot, atmospheric red dust.. Characters: Unit-7: A lean teenage automaton with scuffed white plating, expressive blue optical visor eyes, and a worn utility belt.; Archivist-9: An aging, bulky maintenance droid with amber lenses, rusted shoulder joints, and data cables tangled like hair.; Enforcer-K: A sleek, dark-grey security android with sharp crimson visor lights and heavy enforcement plating.. Style: polished anime fantasy illustration, wide cinematic scene, characters shown at medium distance within a detailed environment, soft dramatic lighting, cinematic balanced palette, painterly, beautiful. No close-up faces, no gore, no text, no captions, no watermark."
+    },
+    {
+      "index": 3,
+      "caption": "Plugging into the dead colony's central terminal amidst flying sparks",
+      "image_prompt": "A damaged robot connecting a data cable to an ancient mainframe inside a silent, empty underground colony hall, dramatic blue and orange sparks, close-up.. Characters: Unit-7: A lean teenage automaton with scuffed white plating, expressive blue optical visor eyes, and a worn utility belt.; Archivist-9: An aging, bulky maintenance droid with amber lenses, rusted shoulder joints, and data cables tangled like hair.; Enforcer-K: A sleek, dark-grey security android with sharp crimson visor lights and heavy enforcement plating.. Style: polished anime fantasy illustration, wide cinematic scene, characters shown at medium distance within a detailed environment, soft dramatic lighting, cinematic balanced palette, painterly, beautiful. No close-up faces, no gore, no text, no captions, no watermark."
+    },
+    {
+      "index": 4,
+      "caption": "The final memory wipe as the visor light gently dims in quiet acceptance",
+      "image_prompt": "A robot sitting peacefully in the ruins of a colony as its blue visor softly dims into darkness, warm melancholic lighting, emotional close-up.. Characters: Unit-7: A lean teenage automaton with scuffed white plating, expressive blue optical visor eyes, and a worn utility belt.; Archivist-9: An aging, bulky maintenance droid with amber lenses, rusted shoulder joints, and data cables tangled like hair.; Enforcer-K: A sleek, dark-grey security android with sharp crimson visor lights and heavy enforcement plating.. Style: polished anime fantasy illustration, wide cinematic scene, characters shown at medium distance within a detailed environment, soft dramatic lighting, cinematic balanced palette, painterly, beautiful. No close-up faces, no gore, no text, no captions, no watermark."
+    }
+  ]
+}
