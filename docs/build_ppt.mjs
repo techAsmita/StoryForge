@@ -60,9 +60,9 @@ pres.title = `${INFO.short_title} - ${INFO.course_code}`;
 pres.author = INFO.members.map((m) => m.name).join(", ");
 pres.theme = { headFontFace: HEAD, bodyFontFace: BODY };
 
-const logoObjects = hasOfficial
-  ? [{ image: { path: officialLogo, x: 11.15, y: 0.14, w: 1.6, h: 1.6 * imgSize(officialLogo).h / imgSize(officialLogo).w } }]
-  : [{ image: { path: A("thapar_mark.png"), x: 12.3, y: 0.14, w: 0.42, h: 0.58 } }];
+// Content slides carry the "ti" mark (cut from the official logo); the title slide shows the full logo.
+const markSize = imgSize(A("thapar_mark.png"));
+const logoObjects = [{ image: { path: A("thapar_mark.png"), x: 12.73 - 0.6 * markSize.w / markSize.h, y: 0.14, w: 0.6 * markSize.w / markSize.h, h: 0.6 } }];
 pres.defineSlideMaster({
   title: "CONTENT",
   background: { color: C.white },
@@ -112,7 +112,7 @@ const preview = (s) => SUM.demo && s.addText("PREVIEW · demo data · rebuild af
   const s = pres.addSlide({ masterName: "TITLE" });
   if (hasOfficial) {
     const { w, h } = imgSize(officialLogo);
-    imgFit(s, officialLogo, 5.67, 0.35, 2.0, 2.0 * h / w);
+    imgFit(s, officialLogo, (13.33 - 1.75 * w / h) / 2, 0.3, 1.75 * w / h, 1.75);
   } else {
     s.addImage({ path: A("thapar_mark.png"), x: 6.33, y: 0.35, w: 0.68, h: 0.94 });
     s.addText([{ text: "THAPAR INSTITUTE", options: { bold: true, color: C.red, fontSize: 16, breakLine: true } },
